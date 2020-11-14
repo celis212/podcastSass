@@ -1,4 +1,16 @@
 /* normalizadores */
+/* html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video */
 *,*::before,*::after{
     margin: 0;
     padding: 0;
@@ -55,10 +67,11 @@ header nav .menu ul li a {
     display: block;
 }
 header nav .menu  ul li a:hover {
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 header nav .menu input[type="checkbox"]:checked ~ ul {
     height: 224px;
+    display: block;
 }
 header nav .menu {
     padding-top: 6px;
@@ -72,7 +85,6 @@ header nav .menu input {
     z-index: 2;
     position: absolute;
     top: 16px;
-    
 }
 /*span -lineas del menu hamburguesa-*/
 header nav .menu span {
@@ -100,4 +112,45 @@ header nav .menu input:checked ~ span:nth-last-child(3) {
 }
 header nav .menu input:checked ~ span:nth-last-child(2) {
     opacity: 0;
+}
+/*menu simple con tamaño menor a 768px*/
+@media screen and (min-width: 800px) and (orientation: landscape){
+    header nav .menu input {
+        display: none;
+    }
+    header nav .menu span {
+        display: none;
+    }
+    header{
+        position: fixed;
+        height: 80px;
+        top: 0;
+        padding: 22px 100px;
+    }
+    header img {
+        float: left;
+        height: 36px;
+        width: 36px;
+    }
+    header nav .menu ul li a {
+        margin: 0;
+        padding: 0;
+        line-height: 28px;
+        color: #060A24;
+        margin-left: 48px;
+    }
+    header nav .menu  ul li {
+        padding: 0;
+        display: inline-block;
+    }
+    header nav .menu ul {
+        position: relative;
+        top: 4px;
+        right: 0;
+        background:#ffffff;
+        height: 36px;
+    }
+    header nav .menu {
+        padding-top: 0;
+    }
 }
