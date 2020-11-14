@@ -1,25 +1,26 @@
 /* normalizadores */
-*{
+*,*::before,*::after{
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
     /* -moz-box-sizing: border-box; */
     /* -webkit-box-sizing: border-box; */
-    
+}
+body{
+    box-sizing: border-box;
 }
 header{
     width: 100%;
     position: fixed;
-    height: 45px;
+    height: 44px;
     top: 0;
-    padding: 10px 5%;
+    padding: 10px 19px 10px 16px;
 }
 header img {
     float: left;
     height: 24px;
     width: 24px;
-    font-family: IBMPlexMono;
 }
 header nav {
     float: right;
@@ -28,6 +29,8 @@ header nav .menu ul {
     /*posicion absolute para que 
     se posicione debajo del resto del header - 
     top medida del header*/
+    font-family: IBMPlexMono;
+    font-size: 16px;
     width: 100%;
     position: absolute;
     top: 45px;
@@ -47,8 +50,8 @@ header nav .menu ul li a {
     position: relative;
     text-decoration: none;
     color: #ffffff;
-    padding: 16px 5%;
-    line-height: 16px;
+    margin: 16px 0 24px 16px;
+    line-height: 28px;
     display: block;
 }
 header nav .menu  ul li a:hover {
@@ -58,16 +61,18 @@ header nav .menu input[type="checkbox"]:checked ~ ul {
     height: 224px;
 }
 header nav .menu {
-    padding-top: 3px;
+    padding-top: 6px;
 }
 /*checkbox transparente y en primer plano*/
 header nav .menu input {
     display: block;
-    width: 40px;
-    height: 32px;
+    width: 22px;
+    height: 14px;
     opacity: 0;
     z-index: 2;
     position: absolute;
+    top: 16px;
+    
 }
 /*span -lineas del menu hamburguesa-*/
 header nav .menu span {
@@ -88,10 +93,10 @@ header nav .menu span:nth-last-child(2) {
 }
 /*movimiento a cruz*/
 header nav .menu input:checked ~ span {
-    transform: translate(0px, 5px) rotate(-45deg)  scale(1.1, 1);
+    transform: translate(5px, 6px) rotate(-45deg)  scale(1.0999, 1);
 }
 header nav .menu input:checked ~ span:nth-last-child(3) {
-    transform: rotate(45deg) scale(1.1, 1);
+    transform: translate(5px, 1px) rotate(45deg) scale(1.0999, 1);
 }
 header nav .menu input:checked ~ span:nth-last-child(2) {
     opacity: 0;
