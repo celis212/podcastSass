@@ -1,0 +1,173 @@
+/* normalizadores */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+    /* -moz-box-sizing: border-box; */
+    /* -webkit-box-sizing: border-box; */
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.header-page {
+    width: 100%;
+    position: fixed;
+    height: 44px;
+    top: 0;
+    padding: 10px 19px 10px 16px;
+}
+
+/*clear fix*/
+.header-page::after {
+    content: "";
+    display: table;
+    clear:both;
+}
+
+.header-page::before {
+    content: "";
+    display: table;
+}
+
+.header-page__logo {
+    float: left;
+    height: 24px;
+    width: 24px;
+}
+
+.header-page__menu {
+    float: right;
+}
+
+.menu__list {
+    /*posicion absolute para que se posicione debajo del resto del header 
+    -top medida del header*/
+    font-family: IBMPlexMono;
+    font-size: 16px;
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    overflow: hidden;
+    list-style: none;
+    background: #0000EC;
+    height: 0px;
+    transition: height 0.4s ease;
+}
+
+.list--item:hover {
+    opacity: 50%;
+}
+
+.item__link-position:hover {
+    opacity: 50%;
+}
+
+.item__link-position,
+.item__link-position:link,
+.item__link-position:visited {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 16px 0 24px 16px;
+    line-height: 28px;
+    display: block;
+}
+
+.menu__checkbox[type="checkbox"]:checked ~ .menu__list {
+    height: 224px;
+    display: block;
+}
+
+/*checkbox transparente y en primer plano*/
+.menu__checkbox {
+    display: block;
+    width: 21px;
+    height: 14px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+}
+
+/*span -lineas del menu hamburguesa-*/
+.menu__burger {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin-bottom: 3px;
+    position: relative;
+    top: 6px;
+    background: #000000;
+    z-index: 1;
+}
+
+/*movimiento a cruz*/
+.menu__checkbox:checked ~ .menu__burger {
+    transform: translate(5px, 5px) scaleX(1.0999) rotate(-45deg);
+    transition: transform 250ms ease-in-out; 
+} 
+
+.menu__checkbox:checked ~ .menu__burger:nth-last-child(2) {
+    transform: translate(5px, -5px) scaleX(1.0999) rotate(45deg) ;
+    transition: transform 250ms ease-in-out; 
+}
+
+.menu__checkbox:checked ~ .menu__burger:nth-last-child(3) {
+    transform: translate(5px, 0px) scaleX(1.0999) ;
+    opacity: 0;
+}
+/*menu simple con tamaño menor a 768px*/
+@media screen and (min-width: 800px) and (orientation: landscape) {
+    .menu__checkbox {
+        display: none;
+    }
+    .menu__burger {
+        display: none;
+    }
+    .header-page {
+        position: fixed;
+        height: 80px;
+        top: 0;
+        padding: 22px 100px;
+    }
+    .header-page__logo {
+        float: left;
+        height: 36px;
+        width: 36px;
+    }
+    .item__link-position,
+    .item__link-position:link,
+    .item__link-position:visited {
+        margin: 0;
+        padding: 0;
+        line-height: 28px;
+        color: #060A24;
+        margin-left: 48px;
+    }
+    .list--item {
+        padding: 0;
+        display: inline-block;
+    }
+    .menu__list {
+        position: relative;
+        top: 4px;
+        right: 0;
+        background:#ffffff;
+        height: 36px;
+    }
+}
