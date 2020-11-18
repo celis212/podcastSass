@@ -18,9 +18,11 @@ time, mark, audio, video {
     /* -moz-box-sizing: border-box; */
     /* -webkit-box-sizing: border-box; */
 }
+
 body {
     box-sizing: border-box;
 }
+
 .header_page {
     width: 100%;
     position: fixed;
@@ -28,24 +30,29 @@ body {
     top: 0;
     padding: 10px 19px 10px 16px;
 }
+
 /*clear fix*/
 .header_page::after {
     content: "";
     display: table;
     clear:both;
 }
+
 .header_page::before {
     content: "";
     display: table;
 }
+
 .header_logo {
     float: left;
     height: 24px;
     width: 24px;
 }
+
 .header_nav {
     float: right;
 }
+
 .nav_div_list {
     /*posicion absolute para que se posicione debajo del resto del header 
     -top medida del header*/
@@ -59,14 +66,17 @@ body {
     list-style: none;
     background: #0000EC;
     height: 0px;
+    transition: height 0.4s ease;
 }
 
-.div_list_item:hover {
+.list_item:hover {
     opacity: 50%;
 }
+
 .list_item_link:hover {
     opacity: 50%;
 }
+
 .list_item_link,
 .list_item_link:link,
 .list_item_link:visited {
@@ -76,10 +86,12 @@ body {
     line-height: 28px;
     display: block;
 }
+
 .div_input[type="checkbox"]:checked ~ .nav_div_list {
     height: 224px;
     display: block;
 }
+
 /*checkbox transparente y en primer plano*/
 .div_input {
     display: block;
@@ -91,6 +103,7 @@ body {
     top: 13px;
     right: 13px;
 }
+
 /*span -lineas del menu hamburguesa-*/
 .header_menu_span {
     display: block;
@@ -101,22 +114,21 @@ body {
     top: 6px;
     background: #000000;
     z-index: 1;
-    /* transform-origin: 50% 50%; */
 }
-.header_menu_span:first-child {
-    /* transform-origin: 50% 50%; */
-}
-.header_menu_span:nth-last-child(2) {
-    /* transform-origin: 0% 50%; */
-}
+
 /*movimiento a cruz*/
 .div_input:checked ~ .header_menu_span {
-    transform: translate(5px, 6px) rotate(-45deg)  scale(1.0999, 1);
-}
-.div_input:checked ~ .header_menu_span:nth-last-child(3) {
-    transform: translate(5px, 1px) rotate(45deg) scale(1.0999, 1);
-}
+    transform: translate(5px, 5px) scaleX(1.0999) rotate(-45deg);
+    transition: transform 250ms ease-in-out; 
+} 
+
 .div_input:checked ~ .header_menu_span:nth-last-child(2) {
+    transform: translate(5px, -5px) scaleX(1.0999) rotate(45deg) ;
+    transition: transform 250ms ease-in-out; 
+}
+
+.div_input:checked ~ .header_menu_span:nth-last-child(3) {
+    transform: translate(5px, 0px) scaleX(1.0999) ;
     opacity: 0;
 }
 /*menu simple con tamaño menor a 768px*/
@@ -147,7 +159,7 @@ body {
         color: #060A24;
         margin-left: 48px;
     }
-    .div_list_item {
+    .list_item {
         padding: 0;
         display: inline-block;
     }
