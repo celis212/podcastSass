@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500&family=IBM+Plex+Sans:wght@100;200;300;400;500;600&display=swap');
+
 /* normalizadores */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -18,19 +20,6 @@ time, mark, audio, video {
     /* -moz-box-sizing: border-box; */
     /* -webkit-box-sizing: border-box; */
 }
-
-body {
-    box-sizing: border-box;
-}
-
-.header-page {
-    width: 100%;
-    position: fixed;
-    height: 44px;
-    top: 0;
-    padding: 10px 19px 10px 16px;
-}
-
 /*clear fix*/
 .header-page::after {
     content: "";
@@ -41,6 +30,18 @@ body {
 .header-page::before {
     content: "";
     display: table;
+}
+
+body {
+    box-sizing: border-box;
+}
+/* logo y nav  */
+.header-page {
+    width: 100%;
+    position: relative;
+    height: 44px;
+    top: 0;
+    padding: 10px 19px 10px 16px;
 }
 
 .header-page__logo {
@@ -56,7 +57,7 @@ body {
 .menu__list {
     /*posicion absolute para que se posicione debajo del resto del header 
     -top medida del header*/
-    font-family: IBMPlexMono;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     width: 100%;
     position: absolute;
@@ -67,14 +68,11 @@ body {
     background: #0000EC;
     height: 0px;
     transition: height 0.4s ease;
+    z-index: 6;
 }
 
 .list--item:hover {
-    opacity: 50%;
-}
-
-.item__link-position:hover {
-    opacity: 50%;
+    /* opacity: 50%; */
 }
 
 .item__link-position,
@@ -85,6 +83,10 @@ body {
     margin: 16px 0 24px 16px;
     line-height: 28px;
     display: block;
+}
+
+.item__link-position:hover {
+    /* opacity: 50%; */
 }
 
 .menu__checkbox[type="checkbox"]:checked ~ .menu__list {
@@ -131,25 +133,88 @@ body {
     transform: translate(5px, 0px) scaleX(1.0999) ;
     opacity: 0;
 }
+
+/* primer front con boton conoce  */
+
+.firts-introduction {
+    display: inline-block;
+    color: #060A24;
+    padding: 0 16px;
+}
+
+.firts-introduction__text {
+    padding-top: 29px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.text--title{
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.text--paragraph-one {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.text--paragraph-two {
+    font-size: 16px;
+    line-height: 24px;
+    display: none;
+}
+
+.firts-introduction__button {
+    position: absolute;
+    padding-top: 36px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.button--conoce {
+    height: 48px;
+    width: 288px;
+    border: none;
+    text-decoration: none;
+    background-color: #00F3BB;
+    font-family: 'IBM Plex Mono', medium;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    text-align: center;  
+}
+
+.button--conoce:hover,
+.button--conoce:active {
+    color: #FFFFFF;
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+}
+
 /*menu simple con tamaño menor a 768px*/
 @media screen and (min-width: 800px) and (orientation: landscape) {
     .menu__checkbox {
         display: none;
     }
+
     .menu__burger {
         display: none;
     }
+
     .header-page {
-        position: fixed;
+        position: relative;
         height: 80px;
         top: 0;
         padding: 22px 100px;
     }
+
     .header-page__logo {
         float: left;
         height: 36px;
         width: 36px;
     }
+
     .item__link-position,
     .item__link-position:link,
     .item__link-position:visited {
@@ -159,15 +224,69 @@ body {
         color: #060A24;
         margin-left: 48px;
     }
+
+    .item__link-position:hover {
+        color: #00F3BB;
+        font-family: 'IBM Plex Mono', medium;
+        text-decoration: line-through;
+    }
+
+    .item__link-position:active {
+        color: #060A24;
+        text-decoration: line-through;
+    }
+
     .list--item {
         padding: 0;
         display: inline-block;
     }
+
     .menu__list {
         position: relative;
         top: 4px;
         right: 0;
         background:#ffffff;
         height: 36px;
+    }
+
+    .firts-introduction {
+        padding: 0 200px;
+        width: 100%;
+    }
+
+    .firts-introduction__text {
+        padding-top: 120px;
+    }
+
+    .text--title{
+        margin: 0;
+        font-size: 64px;
+        line-height: 84px;
+    }
+
+    .tittle--dot-blue{
+        color: #0000EC;
+    }
+
+    .text--paragraph-one {
+        display: none;
+    }
+    
+    .text--paragraph-two {
+        display: inline-block;
+        width: 628px;
+    }
+
+    .firts-introduction__button {
+        margin-top: 56px;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 0 200px;
+    }
+
+    .button--conoce {
+        height: 56px;
+        width: 226px;
     }
 }
