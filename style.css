@@ -136,13 +136,15 @@ body {
 
 /* primer front con boton conoce  */
 
-.front-introduction {
+.firts-introduction {
     display: inline-block;
     color: #060A24;
+    padding: 0 16px;
 }
 
-.front-introduction__text {
+.firts-introduction__text {
     padding-top: 29px;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .text--title{
@@ -150,21 +152,21 @@ body {
     line-height: 42px;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
-    padding: 0 16px 16px 16px;
+    margin-bottom: 16px;
 }
 
 .text--paragraph-one {
     font-size: 14px;
     line-height: 22px;
-    font-family: 'IBM Plex Mono', monospace;
-    padding: 0 16px;
 }
 
 .text--paragraph-two {
+    font-size: 16px;
+    line-height: 24px;
     display: none;
 }
 
-.front-introduction__button {
+.firts-introduction__button {
     position: absolute;
     padding-top: 36px;
     left: 50%;
@@ -195,20 +197,24 @@ body {
     .menu__checkbox {
         display: none;
     }
+
     .menu__burger {
         display: none;
     }
+
     .header-page {
         position: relative;
         height: 80px;
         top: 0;
         padding: 22px 100px;
     }
+
     .header-page__logo {
         float: left;
         height: 36px;
         width: 36px;
     }
+
     .item__link-position,
     .item__link-position:link,
     .item__link-position:visited {
@@ -234,11 +240,53 @@ body {
         padding: 0;
         display: inline-block;
     }
+
     .menu__list {
         position: relative;
         top: 4px;
         right: 0;
         background:#ffffff;
         height: 36px;
+    }
+
+    .firts-introduction {
+        padding: 0 200px;
+        width: 100%;
+    }
+
+    .firts-introduction__text {
+        padding-top: 120px;
+    }
+
+    .text--title{
+        margin: 0;
+        font-size: 64px;
+        line-height: 84px;
+    }
+
+    .tittle--dot-blue{
+        color: #0000EC;
+    }
+
+    .text--paragraph-one {
+        display: none;
+    }
+    
+    .text--paragraph-two {
+        display: inline-block;
+        width: 628px;
+    }
+
+    .firts-introduction__button {
+        margin-top: 56px;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 0 200px;
+    }
+
+    .button--conoce {
+        height: 56px;
+        width: 226px;
     }
 }
