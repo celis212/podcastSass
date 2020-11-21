@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500&family=IBM+Plex+Sans:wght@100;200;300;400;500;600&display=swap');
-
 /* normalizadores */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -20,6 +18,11 @@ time, mark, audio, video {
     /* -moz-box-sizing: border-box; */
     /* -webkit-box-sizing: border-box; */
 }
+
+body {
+    box-sizing: border-box;
+}
+
 /*clear fix*/
 .header-page::after {
     content: "";
@@ -32,9 +35,18 @@ time, mark, audio, video {
     display: table;
 }
 
-body {
-    box-sizing: border-box;
+/*checkbox transparente y en primer plano*/
+.menu__checkbox {
+    display: block;
+    width: 28px;
+    height: 24px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
+
 /* logo y nav  */
 .header-page {
     width: 100%;
@@ -54,58 +66,6 @@ body {
     float: right;
 }
 
-.menu__list {
-    /*posicion absolute para que se posicione debajo del resto del header 
-    -top medida del header*/
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
-    width: 100%;
-    position: absolute;
-    top: 45px;
-    right: 0;
-    overflow: hidden;
-    list-style: none;
-    background: #0000EC;
-    height: 0px;
-    transition: height 0.4s ease;
-    z-index: 6;
-}
-
-.list--item:hover {
-    /* opacity: 50%; */
-}
-
-.item__link-position,
-.item__link-position:link,
-.item__link-position:visited {
-    text-decoration: none;
-    color: #ffffff;
-    margin: 16px 0 24px 16px;
-    line-height: 28px;
-    display: block;
-}
-
-.item__link-position:hover {
-    /* opacity: 50%; */
-}
-
-.menu__checkbox[type="checkbox"]:checked ~ .menu__list {
-    height: 224px;
-    display: block;
-}
-
-/*checkbox transparente y en primer plano*/
-.menu__checkbox {
-    display: block;
-    width: 21px;
-    height: 14px;
-    opacity: 0;
-    z-index: 2;
-    position: absolute;
-    top: 13px;
-    right: 13px;
-}
-
 /*span -lineas del menu hamburguesa-*/
 .menu__burger {
     display: block;
@@ -118,20 +78,86 @@ body {
     z-index: 1;
 }
 
+.menu__list {
+    /*posicion absolute para que se posicione debajo del resto del header 
+    -top medida del header*/
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    width: 100%;
+    position: absolute;
+    /* top: 45px; */
+    top: 4px; 
+    right: 0;
+    overflow: hidden;
+    list-style: none;
+    /* background: #0000EC; */
+    background:#ffffff;
+    height: 0px;
+    /* transition: height 0.4s ease; */
+    /* z-index: 6; */
+}
+
+.item__link-position,
+.item__link-position:link,
+.item__link-position:visited {
+    text-decoration: none;
+    /* color: #ffffff; */
+    color: #060A24;
+    padding: 0;
+    margin: 0;
+    margin-left: 48px;
+    /* margin: 16px 0 24px 16px; */
+    line-height: 28px;
+    display: block;
+}
+
+.menu__checkbox[type="checkbox"]:checked  ~ .menu-checked .menu-checked__list{
+    height: 224px;
+}
+
 /*movimiento a cruz*/
-.menu__checkbox:checked ~ .menu__burger {
+.menu__checkbox:checked + header .menu__burger {
     transform: translate(5px, 5px) scaleX(1.0999) rotate(-45deg);
     transition: transform 250ms ease-in-out; 
 } 
 
-.menu__checkbox:checked ~ .menu__burger:nth-last-child(2) {
+.menu__checkbox:checked + header .menu__burger:nth-last-child(2) {
     transform: translate(5px, -5px) scaleX(1.0999) rotate(45deg) ;
     transition: transform 250ms ease-in-out; 
 }
 
-.menu__checkbox:checked ~ .menu__burger:nth-last-child(3) {
+.menu__checkbox:checked + header .menu__burger:nth-last-child(3) {
     transform: translate(5px, 0px) scaleX(1.0999) ;
     opacity: 0;
+}
+
+/*menu desplegable debajo del header*/
+.menu-checked__list {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    width: 100%;
+    top: 45px;
+    top: 4px; 
+    right: 0;
+    overflow: hidden;
+    list-style: none;
+    background: #0000EC;
+    height: 0px;
+    transition: height 0.4s ease;
+    z-index: 6;
+}
+
+.item-checked--link,
+.item-checked--link:link,
+.item-checked--link:visited {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    margin-left: 48px;
+    margin: 16px 0 24px 16px;
+    line-height: 28px;
+    display: block;
 }
 
 /* primer front con boton conoce  */
@@ -167,13 +193,14 @@ body {
 }
 
 .firts-introduction__button {
-    position: absolute;
     padding-top: 36px;
-    left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 2;
 }
 
-.button--conoce {
+.button--conoce,
+.button--conoce:active {
     height: 48px;
     width: 288px;
     border: none;
@@ -186,14 +213,39 @@ body {
     text-align: center;  
 }
 
-.button--conoce:hover,
-.button--conoce:active {
-    color: #FFFFFF;
-    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+/* zona de spotify con el gradiente*/
+.spotify{
+    width: 100%;
+    margin-top: 24px;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    padding-bottom: 132.5px;
 }
 
-/*menu simple con tamaño menor a 768px*/
-@media screen and (min-width: 800px) and (orientation: landscape) {
+.spotify__title{
+    display: block;
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    padding-top: 64px;
+    padding-left: 16px;
+}
+
+.spotify__list{
+    margin-top: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list__item-podcast{
+    margin-bottom: 11px;
+}
+
+/*menu simple con tamaño menor a 1024px*/
+@media screen and (min-width: 1100px) /*and (orientation: landscape)*/ {
     .menu__checkbox {
         display: none;
     }
@@ -201,28 +253,36 @@ body {
     .menu__burger {
         display: none;
     }
-
+    /* logo y nav  */
     .header-page {
-        position: relative;
+        /* position: relative; */
         height: 80px;
-        top: 0;
+        /* top: 0; */
         padding: 22px 100px;
     }
 
     .header-page__logo {
-        float: left;
+        /* float: left; */
         height: 36px;
         width: 36px;
+    }
+    /* lista de opciones en el nav  */
+    .menu__list {
+        position: relative;
+        /* top: 4px; */
+        /* right: 0; */
+        /* background:#ffffff; */
+        height: 36px;
     }
 
     .item__link-position,
     .item__link-position:link,
     .item__link-position:visited {
-        margin: 0;
-        padding: 0;
-        line-height: 28px;
-        color: #060A24;
-        margin-left: 48px;
+        /* margin: 0; */
+        /* padding: 0; */
+        /* line-height: 28px; */
+        /* color: #060A24; */
+        /* margin-left: 48px; */
     }
 
     .item__link-position:hover {
@@ -240,15 +300,7 @@ body {
         padding: 0;
         display: inline-block;
     }
-
-    .menu__list {
-        position: relative;
-        top: 4px;
-        right: 0;
-        background:#ffffff;
-        height: 36px;
-    }
-
+    /* primer front con boton conoce  */
     .firts-introduction {
         padding: 0 200px;
         width: 100%;
@@ -278,14 +330,98 @@ body {
     }
 
     .firts-introduction__button {
-        margin-top: 56px;
-        left: 0;
-        transform: translate(0);
+        padding-top: 56px;
         width: 100%;
-        padding: 0 200px;
+        justify-content: flex-start;
     }
 
     .button--conoce {
+        height: 56px;
+        width: 226px;
+    }
+
+    .button--conoce:hover,
+    .button--conoce:active {
+        color: #FFFFFF;
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    }
+}
+
+/*menu simple con tamaño menor a 768px*/
+@media screen and (min-width: 768px) and (max-width: 1100px)/*(orientation: landscape)*/ {
+    /* logo y nav  */
+    .header-page {
+        /* position: relative; */
+        height: 56px;
+        /* top: 0; */
+        padding: 14px 50px;
+    }
+
+    .header-page__logo {
+        /* float: left; */
+        height: 28px;
+        width: 28px;
+    }
+
+    .header-page__menu {
+        height: 28px;
+        width: 28px;
+    }
+
+    .menu-checked {
+        top: 55px; 
+    }
+
+    .item-checked--link,
+    .item-checked--link:link,
+    .item-checked--link:visited {
+        margin-left: 49px; 
+    }
+
+    .menu__checkbox {
+        top: 14px;
+        right: 51px;
+    }
+
+    .menu__burger {
+        top: 8px;
+    }
+    /* primer front con boton conoce  */
+    .firts-introduction {
+        padding: 0 50px;
+        width: 100%;
+    }
+
+    .firts-introduction__text {
+        padding-top: 74px;
+    }
+
+    .text--title{
+        margin: 0;
+        font-size: 57px;
+        line-height: 73px;
+    }
+
+    .tittle--dot-blue{
+        color: #0000EC;
+    }
+
+    .text--paragraph-one {
+        display: none;
+    }
+    
+    .text--paragraph-two {
+        display: inline-block;
+        max-width: 628px;
+    }
+
+    .firts-introduction__button {
+        padding-top: 40px;
+        width: 100%;
+    }
+
+    .button--conoce,
+    .button--conoce:active {
         height: 56px;
         width: 226px;
     }
