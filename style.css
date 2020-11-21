@@ -244,6 +244,13 @@ body {
     margin-bottom: 11px;
 }
 
+.spotify__women-code {
+    position: absolute;
+    background: no-repeat;
+    background-size: cover;
+    height: 519px;
+}
+
 /*menu simple con tamaño menor a 1024px*/
 @media screen and (min-width: 1100px) /*and (orientation: landscape)*/ {
     .menu__checkbox {
