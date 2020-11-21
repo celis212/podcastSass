@@ -79,34 +79,26 @@ body {
 }
 
 .menu__list {
-    /*posicion absolute para que se posicione debajo del resto del header 
-    -top medida del header*/
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     width: 100%;
     position: absolute;
-    /* top: 45px; */
     top: 4px; 
     right: 0;
     overflow: hidden;
     list-style: none;
-    /* background: #0000EC; */
     background:#ffffff;
     height: 0px;
-    /* transition: height 0.4s ease; */
-    /* z-index: 6; */
 }
 
 .item__link-position,
 .item__link-position:link,
 .item__link-position:visited {
     text-decoration: none;
-    /* color: #ffffff; */
     color: #060A24;
     padding: 0;
     margin: 0;
     margin-left: 48px;
-    /* margin: 16px 0 24px 16px; */
     line-height: 28px;
     display: block;
 }
@@ -218,7 +210,7 @@ body {
     width: 100%;
     margin-top: 24px;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
     padding-bottom: 132.5px;
 }
 
@@ -238,12 +230,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style: none;
 }
 
 .list__item-podcast{
     margin-bottom: 11px;
 }
 
+.list__item-podcast-large{
+    display: none;
+}
+
+/* women codding*/
 .spotify__women-code {
     position: absolute;
     background: no-repeat;
@@ -262,34 +260,18 @@ body {
     }
     /* logo y nav  */
     .header-page {
-        /* position: relative; */
         height: 80px;
-        /* top: 0; */
         padding: 22px 100px;
     }
 
     .header-page__logo {
-        /* float: left; */
         height: 36px;
         width: 36px;
     }
     /* lista de opciones en el nav  */
     .menu__list {
         position: relative;
-        /* top: 4px; */
-        /* right: 0; */
-        /* background:#ffffff; */
         height: 36px;
-    }
-
-    .item__link-position,
-    .item__link-position:link,
-    .item__link-position:visited {
-        /* margin: 0; */
-        /* padding: 0; */
-        /* line-height: 28px; */
-        /* color: #060A24; */
-        /* margin-left: 48px; */
     }
 
     .item__link-position:hover {
@@ -352,20 +334,46 @@ body {
         color: #FFFFFF;
         background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
     }
+    /* spotify list*/
+    .spotify{
+        clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+        margin-top: 5px;
+        padding-bottom: 180px;
+    }
+
+    .spotify__title{
+        font-size: 48px;
+        line-height: 62px;
+        padding-top: 186px;
+        padding-left: 200px;
+    }
+
+    .spotify__list{
+        margin-top: 26px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .list__item-podcast{
+        display: none;
+    }
+    
+    .list__item-podcast-large{
+        display: block;
+        margin-bottom: 72px;
+    }
 }
 
 /*menu simple con tamaño menor a 768px*/
 @media screen and (min-width: 768px) and (max-width: 1100px)/*(orientation: landscape)*/ {
     /* logo y nav  */
     .header-page {
-        /* position: relative; */
         height: 56px;
-        /* top: 0; */
         padding: 14px 50px;
     }
 
     .header-page__logo {
-        /* float: left; */
         height: 28px;
         width: 28px;
     }
@@ -431,5 +439,29 @@ body {
     .button--conoce:active {
         height: 56px;
         width: 226px;
+    }
+    /* spotify list*/
+    .spotify{
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        margin-top: 15px;
+        padding-bottom: 100px;
+    }
+
+    .spotify__title{
+        font-size: 42px;
+        line-height: 54px;
+        padding-top: 125px;
+        padding-left: 80px;
+    }
+
+    .spotify__list{
+        margin-top: 26px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .list__item-podcast{
+        margin-bottom: 72px;
     }
 }
