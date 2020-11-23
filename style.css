@@ -336,7 +336,7 @@ body {
     }
     /* spotify list*/
     .spotify{
-        clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
         margin-top: 5px;
         padding-bottom: 180px;
     }
@@ -349,7 +349,7 @@ body {
     }
 
     .spotify__list{
-        margin-top: 26px;
+        margin-top: 23px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
