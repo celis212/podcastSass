@@ -22,7 +22,6 @@ time, mark, audio, video {
 body {
     box-sizing: border-box;
 }
-
 /*clear fix*/
 .header-page::after {
     content: "";
@@ -34,7 +33,6 @@ body {
     content: "";
     display: table;
 }
-
 /*checkbox transparente y en primer plano*/
 .menu__checkbox {
     display: block;
@@ -46,7 +44,6 @@ body {
     top: 8px;
     right: 8px;
 }
-
 /* logo y nav  */
 .header-page {
     width: 100%;
@@ -65,7 +62,6 @@ body {
 .header-page__menu {
     float: right;
 }
-
 /*span -lineas del menu hamburguesa-*/
 .menu__burger {
     display: block;
@@ -103,10 +99,9 @@ body {
     display: block;
 }
 
-.menu__checkbox[type="checkbox"]:checked  ~ .menu-checked .menu-checked__list{
+.menu__checkbox[type="checkbox"]:checked  ~ .menu-checked .menu-checked__list {
     height: 224px;
 }
-
 /*movimiento a cruz*/
 .menu__checkbox:checked + header .menu__burger {
     transform: translate(5px, 5px) scaleX(1.0999) rotate(-45deg);
@@ -122,7 +117,6 @@ body {
     transform: translate(5px, 0px) scaleX(1.0999) ;
     opacity: 0;
 }
-
 /*menu desplegable debajo del header*/
 .menu-checked__list {
     font-family: 'IBM Plex Mono', monospace;
@@ -151,9 +145,7 @@ body {
     line-height: 28px;
     display: block;
 }
-
 /* primer front con boton conoce  */
-
 .firts-introduction {
     display: inline-block;
     color: #060A24;
@@ -165,7 +157,7 @@ body {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.text--title{
+.text--title {
     font-size: 36px;
     line-height: 42px;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -204,9 +196,8 @@ body {
     cursor: pointer;
     text-align: center;  
 }
-
 /* zona de spotify con el gradiente*/
-.spotify{
+.spotify {
     width: 100%;
     margin-top: 24px;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
@@ -214,7 +205,7 @@ body {
     padding-bottom: 132.5px;
 }
 
-.spotify__title{
+.spotify__title {
     display: block;
     font-size: 36px;
     line-height: 42px;
@@ -225,7 +216,7 @@ body {
     padding-left: 16px;
 }
 
-.spotify__list{
+.spotify__list {
     margin-top: 21px;
     display: flex;
     flex-direction: column;
@@ -233,20 +224,17 @@ body {
     list-style: none;
 }
 
-.list__item-podcast{
+.list__item-podcast {
     margin-bottom: 11px;
 }
 
-.list__item-podcast-large{
+.list__item-podcast-large {
     display: none;
 }
-
 /* women codding*/
-.spotify__women-code {
-    position: absolute;
-    background: no-repeat;
-    background-size: cover;
-    height: 519px;
+.women-codding {
+    display: flex;
+    flex-direction: row;
 }
 
 /*menu simple con tamaño menor a 1024px*/
@@ -299,13 +287,13 @@ body {
         padding-top: 120px;
     }
 
-    .text--title{
+    .text--title {
         margin: 0;
         font-size: 64px;
         line-height: 84px;
     }
 
-    .tittle--dot-blue{
+    .tittle--dot-blue {
         color: #0000EC;
     }
 
@@ -335,36 +323,35 @@ body {
         background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
     }
     /* spotify list*/
-    .spotify{
+    .spotify {
         clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
         margin-top: 5px;
         padding-bottom: 180px;
     }
 
-    .spotify__title{
+    .spotify__title {
         font-size: 48px;
         line-height: 62px;
         padding-top: 186px;
         padding-left: 200px;
     }
 
-    .spotify__list{
+    .spotify__list {
         margin-top: 23px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    .list__item-podcast{
+    .list__item-podcast {
         display: none;
     }
     
-    .list__item-podcast-large{
+    .list__item-podcast-large {
         display: block;
         margin-bottom: 72px;
     }
 }
-
 /*menu simple con tamaño menor a 768px*/
 @media screen and (min-width: 768px) and (max-width: 1100px)/*(orientation: landscape)*/ {
     /* logo y nav  */
@@ -411,13 +398,13 @@ body {
         padding-top: 74px;
     }
 
-    .text--title{
+    .text--title {
         margin: 0;
         font-size: 57px;
         line-height: 73px;
     }
 
-    .tittle--dot-blue{
+    .tittle--dot-blue {
         color: #0000EC;
     }
 
@@ -441,27 +428,27 @@ body {
         width: 226px;
     }
     /* spotify list*/
-    .spotify{
+    .spotify {
         clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
         margin-top: 15px;
         padding-bottom: 100px;
     }
 
-    .spotify__title{
+    .spotify__title {
         font-size: 42px;
         line-height: 54px;
         padding-top: 125px;
         padding-left: 80px;
     }
 
-    .spotify__list{
+    .spotify__list {
         margin-top: 26px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    .list__item-podcast{
+    .list__item-podcast {
         margin-bottom: 72px;
     }
 }
