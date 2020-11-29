@@ -1,4 +1,4 @@
-/* normalizadores */
+/* normalizers */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -33,7 +33,7 @@ body {
     content: "";
     display: table;
 }
-/*checkbox transparente y en primer plano*/
+/*checkbox transparent and in the foreground*/
 .menu__checkbox {
     display: block;
     width: 28px;
@@ -62,7 +62,7 @@ body {
 .header-page__menu {
     float: right;
 }
-/*span -lineas del menu hamburguesa-*/
+/*span -hamburger menu lines-*/
 .menu__burger {
     display: block;
     width: 18px;
@@ -102,7 +102,7 @@ body {
 .menu__checkbox[type="checkbox"]:checked  ~ .menu-checked .menu-checked__list {
     height: 224px;
 }
-/*movimiento a cruz*/
+/*cross movement*/
 .menu__checkbox:checked + header .menu__burger {
     transform: translate(5px, 5px) scaleX(1.0999) rotate(-45deg);
     transition: transform 250ms ease-in-out; 
@@ -117,20 +117,21 @@ body {
     transform: translate(5px, 0px) scaleX(1.0999) ;
     opacity: 0;
 }
-/*menu desplegable debajo del header*/
+/*drop down menu below header*/
 .menu-checked__list {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
+    line-height: 28px;
+    /* font-weight: 100; */
     width: 100%;
-    top: 45px;
-    top: 4px; 
-    right: 0;
+    /* top: 45px; */
+    /* right: 0; */
     overflow: hidden;
     list-style: none;
     background: #0000EC;
     height: 0px;
     transition: height 0.4s ease;
-    z-index: 6;
+    /* z-index: 6; */
 }
 
 .item-checked--link,
@@ -139,17 +140,16 @@ body {
     text-decoration: none;
     color: #ffffff;
     padding: 0;
-    margin: 0;
-    margin-left: 48px;
-    margin: 16px 0 24px 16px;
-    line-height: 28px;
+    /* margin: 0; */
+    /* margin-left: 48px; */
+    margin: 16px 0 24px 5vw;
     display: block;
 }
-/* primer front con boton conoce  */
+/* first front with button conoce */
 .firts-introduction {
     display: inline-block;
     color: #060A24;
-    padding: 0 16px;
+    padding: 0 5vw;
 }
 
 .firts-introduction__text {
@@ -180,7 +180,7 @@ body {
     padding-top: 36px;
     display: flex;
     justify-content: center;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .button--conoce,
@@ -193,16 +193,18 @@ body {
     font-family: 'IBM Plex Mono', medium;
     font-size: 16px;
     line-height: 22px;
+    font-weight: 500;
     cursor: pointer;
     text-align: center;  
 }
-/* zona de spotify con el gradiente*/
+/* spotify zone with gradient*/
 .spotify {
     width: 100%;
     margin-top: 24px;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
-    padding-bottom: 132.5px;
+    padding-bottom: 132.5px;/*11 px is subtracted from the list__itemn-podcast*/
+    /* z-index: 1; */
 }
 
 .spotify__title {
@@ -210,10 +212,10 @@ body {
     font-size: 36px;
     line-height: 42px;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: #ffffff;
     padding-top: 64px;
-    padding-left: 16px;
+    padding-left: 5vw;
 }
 
 .spotify__list {
@@ -233,12 +235,40 @@ body {
 }
 /* women codding*/
 .women-codding {
+    position: relative;
+    /* z-index: 2; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-/*menu simple con tamaño menor a 1024px*/
-@media screen and (min-width: 1100px) /*and (orientation: landscape)*/ {
+.women-codding__image{
+    width: 360px;
+    margin-top: -95.5px;
+    align-self: center;
+}
+
+.women-codding__text{
+    color: #060A24;
+}
+
+.text__title{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    margin: 27px 16px 0px 16px;
+}
+
+.test__paragraph{
+    font-family: 'IBM Plex Mono', medium;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 8px 16px 0px 16px;
+}
+
+/*simple menu with size more than 1100px*/
+@media screen and (min-width: 1170px) /*and (orientation: landscape)*/ {
     .menu__checkbox {
         display: none;
     }
@@ -256,7 +286,7 @@ body {
         height: 36px;
         width: 36px;
     }
-    /* lista de opciones en el nav  */
+    /*list of options in nav */
     .menu__list {
         position: relative;
         height: 36px;
@@ -274,12 +304,16 @@ body {
     }
 
     .list--item {
-        padding: 0;
+        /* padding: 0; */
         display: inline-block;
     }
-    /* primer front con boton conoce  */
+
+    .menu-checked {
+        display: none;
+    }
+    /* first front with button conoce  */
     .firts-introduction {
-        padding: 0 200px;
+        padding: 0 13.889vw;
         width: 100%;
     }
 
@@ -333,11 +367,11 @@ body {
         font-size: 48px;
         line-height: 62px;
         padding-top: 186px;
-        padding-left: 200px;
+        padding-left: 13.889vw;
     }
 
     .spotify__list {
-        margin-top: 23px;
+        margin-top: 26px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -351,9 +385,14 @@ body {
         display: block;
         margin-bottom: 72px;
     }
+    /* women codding*/
+    .women-codding {
+        display: flex;
+        flex-direction: row;
+    }
 }
-/*menu simple con tamaño menor a 768px*/
-@media screen and (min-width: 768px) and (max-width: 1100px)/*(orientation: landscape)*/ {
+/*simple menu with size less than 768px*/
+@media screen and (min-width: 768px) and (max-width: 1169px)/*(orientation: landscape)*/ {
     /* logo y nav  */
     .header-page {
         height: 56px;
@@ -371,13 +410,13 @@ body {
     }
 
     .menu-checked {
-        top: 55px; 
+        /* top: 55px;  */
     }
 
     .item-checked--link,
     .item-checked--link:link,
     .item-checked--link:visited {
-        margin-left: 49px; 
+        margin-left: 7vw; 
     }
 
     .menu__checkbox {
@@ -388,9 +427,9 @@ body {
     .menu__burger {
         top: 8px;
     }
-    /* primer front con boton conoce  */
+    /* first front with button conoce  */
     .firts-introduction {
-        padding: 0 50px;
+        padding: 0 7vw;
         width: 100%;
     }
 
@@ -438,11 +477,11 @@ body {
         font-size: 42px;
         line-height: 54px;
         padding-top: 125px;
-        padding-left: 80px;
+        padding-left: 7vw;
     }
 
     .spotify__list {
-        margin-top: 26px;
+        margin-top: 23px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -450,5 +489,7 @@ body {
 
     .list__item-podcast {
         margin-bottom: 72px;
+        padding: 0 45px;
+
     }
 }
