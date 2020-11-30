@@ -287,6 +287,55 @@ body {
     max-width: 480.5px;
     max-height: 364px;
 }
+/*our topics*/
+.our-topic {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-top: 48px;
+}
+
+.our-topic__title {
+    padding: 0 5vw;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+}
+
+.our-topic__icons {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons__article {
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons--image {
+    width: 104px;
+    height: 104px;
+    margin: 13px 0;
+}
+
+.icons--text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+#text--work {
+    margin-bottom: 36px;/*different size in the margin bottom*/
+}
+
+#text--security {
+    margin-bottom: 42px;/*different size in the margin bottom*/
+}
 /*simple menu with size more than 1170px*/
 @media screen and (min-width: 1170px) /*and (orientation: landscape)*/ {
     .menu__checkbox {
@@ -439,9 +488,39 @@ body {
         padding-left: 13.889vw;
         margin-bottom: 36px;
     }
+    /*our topics*/
+    .our-topic {
+        margin-top: 64px;
+    }
+
+    .our-topic__title {
+        padding: 0 13.889vw;
+        font-size: 48px;
+        line-height: 68px;
+    }
+
+    .our-topic__icons {
+        margin-top: 56px;
+        flex-direction: row;
+        margin-left: 13.889vw;
+        align-items: flex-start;
+    }
+
+    .icons__article {
+        width: 260px;
+    }
+
+    .icons--text {
+        margin-top: 16px;
+        margin-bottom: 34px;
+    }
+
+    #text--security {
+        margin-bottom: 34px;/*the measure requested at the beginning was corrected*/
+    }
 }
 /*simple menu with size more than 780px and less tan 1169px*/
-@media screen and (min-width: 780px) and (max-width: 1169px)/*(orientation: landscape)*/ {
+@media screen and (min-width: 780px) and (max-width: 1170px)/*(orientation: landscape)*/ {
     /* logo y nav  */
     .header-page {
         height: 56px;
@@ -567,5 +646,36 @@ body {
         line-height: 52px;
         padding-left: 7vw;
         margin-bottom: 25px;
+    }
+    /*our topics*/
+    .our-topic {
+        margin-top: 56px;
+    }
+
+    .our-topic__title {
+        padding: 0 7vw;
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    .our-topic__icons {
+        margin-top: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 20vw;
+        justify-content: center;
+    }
+
+    .icons__article {
+        width: 254px;
+    }
+
+    .icons--text {
+        margin-top: 16px;
+        margin-bottom: 34px;
+    }
+
+    #text--security {
+        margin-bottom: 34px;/*the measure requested at the beginning was corrected*/
     }
 }
