@@ -21,6 +21,7 @@ time, mark, audio, video {
 
 body {
     box-sizing: border-box;
+    color: #060A24;
 }
 /*adjust of viewport*/
 .container{
@@ -101,7 +102,6 @@ body {
 .item__link-position:link,
 .item__link-position:visited {
     text-decoration: none;
-    color: #060A24;
     padding: 0;
     margin: 0;
     margin-left: 48px;
@@ -152,7 +152,6 @@ body {
 /* first front with button conoce */
 .firts-introduction {
     display: inline-block;
-    color: #060A24;
     padding: 0 5vw;
 }
 
@@ -230,11 +229,10 @@ body {
 
 .list__item-podcast {
     margin-bottom: 11px;
+    width: 298px;
+    height: 232px;
 }
 
-.list__item-podcast-large {
-    display: none;
-}
 /* women codding*/
 .women-codding {
     position: relative;
@@ -247,10 +245,6 @@ body {
     height: 519px;
     margin-top: -95.5px;
     align-self: center;
-}
-
-.women-codding__text {
-    color: #060A24;
 }
 
 .text__title {
@@ -274,7 +268,6 @@ body {
 }
 
 .guess__title {
-    color: #060A24;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 36px;
     font-weight: 400;
@@ -326,7 +319,6 @@ body {
     }
 
     .item__link-position:active {
-        color: #060A24;
         text-decoration: line-through;
     }
 
@@ -404,13 +396,12 @@ body {
     }
 
     .list__item-podcast {
-        display: none;
-    }
-    
-    .list__item-podcast-large {
+        width: 40.55vw;
+        max-width: 584px;
         display: block;
         margin-bottom: 72px;
     }
+    
     /* women codding*/
     .women-codding {
         flex-direction: row;
@@ -542,8 +533,7 @@ body {
     }
 
     .list__item-podcast {
-        margin-bottom: 72px;
-        padding: 0 45px ;
+        margin: 0 45px 72px 0;
     }
     /* women codding*/
     .women-codding {
