@@ -358,6 +358,37 @@ body {
     display: flex;
     justify-content: center;
 }
+/*media section*/
+.link-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 121px;
+}
+
+.link-media__copyright {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 8px;
+}
+
+.link-media__social {
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    height: 31px;
+    margin-top: 8px;
+}
+
+.link--image {
+    height: 28px;
+    width: 14px;
+}
 /*simple menu with size more than 1170px*/
 @media screen and (min-width: 1170px) /*and (orientation: landscape)*/ {
     .menu__checkbox {
@@ -402,7 +433,7 @@ body {
     }
     /* first front with button conoce  */
     .firts-introduction {
-        padding: 0 13.889vw;
+        padding: 0 200px;
         width: 100%;
     }
 
@@ -456,7 +487,7 @@ body {
         font-size: 48px;
         line-height: 62px;
         padding-top: 186px;
-        padding-left: 13.889vw;
+        padding-left: 200px;
     }
 
     .spotify__list {
@@ -476,7 +507,8 @@ body {
     /* women codding*/
     .women-codding {
         flex-direction: row;
-        margin-left: 13.889vw;
+        margin-left: 200px;
+        margin-right: 100px;
     }
 
     .women-codding__image {
@@ -486,14 +518,14 @@ body {
     }
 
     .text__title {
-        width: 32.223vw;
+        max-width: 464px;
         font-size: 48px;
         line-height: 62px;
         margin: 20.4px 0 0 62.4px;
     }
     
     .test__paragraph {
-        width: 32.223vw;
+        max-width: 464px;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
@@ -516,7 +548,7 @@ body {
     }
 
     .our-topic__title {
-        padding: 0 13.889vw;
+        padding: 0 200px;
         font-size: 48px;
         line-height: 68px;
     }
@@ -524,7 +556,7 @@ body {
     .our-topic__icons {
         margin-top: 56px;
         flex-direction: row;
-        margin-left: 13.889vw;
+        margin-left: 200px;
         align-items: flex-start;
     }
 
@@ -542,7 +574,7 @@ body {
     }
     /*news section*/
     .news {
-        clip-path: polygon(0 48%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 26%, 100% 0, 100% 100%, 0 100%);
         padding-bottom: 151px;
     }
 
@@ -550,6 +582,31 @@ body {
         font-size: 48px;
         line-height: 62px;
         padding: 213px 0 36px 0;
+    }
+    /*media section*/
+    .link-media {
+        justify-content: space-between;
+        height: 95px;
+    }
+
+    .link-media__copyright {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        width: auto;
+        margin-bottom: 0px;
+        margin-left: 100px;
+    }
+
+    .link-media__social {
+        width: auto;
+        margin-top: 0px;
+        margin-right: 100px;
+    }
+
+    .link--image {
+        width: 18px;
+        margin-left: 36px;
     }
 }
 /*simple menu with size more than 780px and less tan 1169px*/
@@ -625,7 +682,7 @@ body {
     }
     /* spotify list*/
     .spotify {
-        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 9%, 100% 0, 100% 91%, 0 100%);
         margin-top: 15px;
         padding-bottom: 110px;/*64 px is subtracted from the list__itemn-podcast*/
     }
@@ -696,7 +753,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0 20vw;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .icons__article {
@@ -713,7 +770,7 @@ body {
     }
     /*news section*/
     .news {
-        clip-path: polygon(0 47%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 21%, 100% 0, 100% 100%, 0 100%);
         padding-bottom: 109px;
     }
 
@@ -722,4 +779,29 @@ body {
         line-height: 52px;
         padding: 139px 0 36px 0;
     }  
+    /*media section*/
+    .link-media {
+        justify-content: space-between;
+    }
+
+    .link-media__copyright {
+        font-size: 15px;
+        line-height: 25px;
+        width: auto;
+        margin-bottom: 0px;
+        margin-left: 50px;
+    }
+
+    .link-media__social {
+        border: 1px solid blue;
+        width: auto;
+        margin-top: 0px;
+        margin-right: 50px;
+    }
+
+    .link--image {
+        border: 1px solid green;
+        width: 18px;
+        margin-left: 36px;
+    }
 }
