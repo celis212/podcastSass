@@ -231,6 +231,7 @@ body {
     margin-bottom: 11px;
     width: 298px;
     height: 231px;
+    
 }
 
 /* women codding*/
@@ -475,6 +476,8 @@ body {
     .button--conoce:active {
         color: #FFFFFF;
         background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        height: 56px;
+        width: 226px;
     }
     /* spotify list*/
     .spotify {
