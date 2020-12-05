@@ -1,0 +1,40 @@
+.header-page {
+    &__menu {
+        //span -hamburger menu lines
+        .menu__burger {
+            display: block;
+            width: 1.5rem;
+            height: 0.16rem;
+            margin-bottom: 0.25rem;
+            position: relative;
+            top: 0.5rem;
+            background: $color-black;
+            z-index: 1;
+            transition: transform 250ms ease-in-out; 
+        }
+
+        .menu__list {
+            font-family: $font-mono;
+            font-size: 1.33rem;
+            width: 100%;
+            position: absolute;
+            top: 0.33rem; 
+            right: 0;
+            overflow: hidden;
+            list-style: none;
+            background:$color-white;/*ponerlo en duda*/
+            height: 0px;
+
+            .item__link-position {
+                &, &:link, &:visited{
+                    text-decoration: none;
+                    padding: 0;
+                    margin: 0;
+                    margin-left: 48px;
+                    line-height: 28px;
+                    display: block;
+                }
+            }
+        }
+    }
+}

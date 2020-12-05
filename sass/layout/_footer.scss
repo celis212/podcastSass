@@ -1,0 +1,18 @@
+.link-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    &__copyright {
+        width: 400px;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-evenly;
+        width: 33.33rem;
+        height: 2.58rem;
+        margin-top: 0.66rem;
+    }
+}

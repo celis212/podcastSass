@@ -1,0 +1,49 @@
+.header-page {
+    width: 100%;
+    position: relative;
+    height: 3.66rem;
+    top: 0;
+    padding: 0.83rem 1.59rem .083rem 1.33rem;
+}
+
+.menu-checked {
+   .menu-checked__list {
+       background: $color-background;
+       width: 100%;
+    } 
+}
+
+.spotify {
+    width: 100%;
+    margin-top: 2rem;
+    background-image: linear-gradient(225deg, 
+    $color-gradient-one 0%, 
+    $color-gradient-two 100%);
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+    padding-bottom: 11.041667rem;//11 px is subtracted from the list__itemn-podcast
+}
+
+.women-codding {
+    position: relative;
+}
+
+.guess {
+    margin-top: 4.5rem;
+}
+
+.our-topic {
+    margin-top: 4rem;
+}
+
+.news {
+    width: 100%;
+    background-image: linear-gradient(225deg,
+    $color-gradient-one 0%, 
+    $color-gradient-two 100%);
+    clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+    padding-bottom: 5.58334rem;
+}
+
+.link-media {
+    height: 10.08rem;
+}
