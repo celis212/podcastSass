@@ -1,6 +1,6 @@
 // menu of lower collapse 
 .menu-checked {
-    .menu-checked__list {
+    &__list {
         overflow: hidden;
         list-style: none;
         height: 0px;

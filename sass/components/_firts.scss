@@ -2,7 +2,7 @@
 .firts-introduction {
     display: inline-block;
 
-    .firts-introduction__text{
+    &__text{
         .text--paragraph-two {
             font-size: 1.33rem;
             line-height: 2rem;

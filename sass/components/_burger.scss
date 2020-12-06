@@ -4,9 +4,9 @@
     float: right;
     top: 1.333rem;
     right: 1.58rem;
-    z-index: 66;
+    z-index: 6;
     //span -hamburger menu lines
-    .menu__burger {
+    &__burger {
         display: block;
         width: 1.5rem;
         height: 0.17rem;

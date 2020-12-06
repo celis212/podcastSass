@@ -1,6 +1,6 @@
 //guess VIP
 .guess {
-    .guess__images {
+    &__images {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

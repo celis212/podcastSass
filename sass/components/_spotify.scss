@@ -1,9 +1,9 @@
 //spotify list 
 .spotify {
-    .spotify__title {
+    &__title {
         display: block;
     }
-    .spotify__list {
+    &__list {
         margin-top: 1.75rem;
         display: flex;
         flex-direction: column;

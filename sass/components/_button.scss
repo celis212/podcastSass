@@ -1,5 +1,5 @@
 .firts-introduction {
-    .firts-introduction__button {
+    &__button {
         padding-top: 3rem;
         display: flex;
         justify-content: center;
@@ -18,7 +18,7 @@
 }
 
 .news {
-    .news__button {
+    &__button {
         display: flex;
         justify-content: center;
 

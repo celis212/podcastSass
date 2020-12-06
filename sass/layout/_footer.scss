@@ -15,9 +15,11 @@
         height: 2.58rem;
         margin-top: 0.66rem;
 
-        .link--image {
-            height: 2.33rem;
-            width: 1.17rem;
+        .fab {
+            text-decoration: none;
+            color: $color-text;
+            font-size: 1.33rem;
+            line-height: 2.33rem;
         }
     }
 }
