@@ -152,7 +152,7 @@ body {
 }
 /* first front with button conoce */
 .firts-introduction {
-    display: inline-block;
+    /* display: inline-block; */
     /* padding: 0 5vw; */
 }
 
@@ -210,7 +210,7 @@ body {
 }
 
 .spotify__title {
-    display: block;
+    /* display: block; */
     /* font-size: 36px; */
     /* line-height: 42px; */
     /* font-weight: 400; */
@@ -220,32 +220,32 @@ body {
 }
 
 .spotify__list {
-    margin-top: 21px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
+    /* margin-top: 21px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* list-style: none; */
 }
 
 .list__item-podcast {
-    margin-bottom: 11px;
-    width: 298px;
-    height: 231px;
+    /* margin-bottom: 11px; */
+    /* width: 298px; */
+    /* height: 231px; */
     
 }
 
 /* women codding*/
 .women-codding {
     /* position: relative; */
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 
 .women-codding__image {
-    width: 360px;
-    height: 519px;
-    margin-top: -95.5px;
-    align-self: center;
+    /* width: 360px; */
+    /* height: 519px; */
+    /* margin-top: -95.5px; */
+    /* align-self: center; */
 }
 
 .text__title {
@@ -276,15 +276,15 @@ body {
 }
 
 .guess__images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
 }
 
 .images__women {
-    max-width: 480.5px;
-    max-height: 364px;
+    /* max-width: 480.5px; */
+    /* max-height: 364px; */
 }
 /*our topics*/
 .our-topic {
@@ -303,22 +303,22 @@ body {
     /* font-size: 24px; */
     /* line-height: 32px; */
     /* font-weight: 600; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
 }
 
 .icons__article {
-    width: 288px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* width: 288px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
 }
 
 .icons--image {
-    width: 104px;
-    height: 104px;
-    margin: 13px 0;
+    /* width: 104px; */
+    /* height: 104px; */
+    /* margin: 13px 0; */
 }
 
 .icons--text {
@@ -385,8 +385,8 @@ body {
 }
 
 .link--image {
-    height: 28px;
-    width: 14px;
+    /* height: 28px; */
+    /* width: 14px; */
 }
 /*simple menu with size more than 1170px*/
 @media screen and (min-width: 1170px) /*and (orientation: landscape)*/ {

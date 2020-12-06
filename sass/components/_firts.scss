@@ -1,0 +1,12 @@
+//first title and text
+.firts-introduction {
+    display: inline-block;
+
+    .firts-introduction__text{
+        .text--paragraph-two {
+            font-size: 1.33rem;
+            line-height: 2rem;
+            display: none;
+        }
+    }
+}

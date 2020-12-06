@@ -1,0 +1,14 @@
+//guess VIP
+.guess {
+    .guess__images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .images__women {
+            width: 26.67rem;
+            height: 20.25rem;
+        }
+    }
+}

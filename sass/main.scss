@@ -3,13 +3,18 @@
 @import "abstracts/variables";
 
 @import "base/base";
-@import "base/animations";
 @import "base/typography";
 
+@import "components/burger";
 @import "components/button";
 @import "components/checkbox";
-@import "components/burger";
+@import "components/firts";
+@import "components/guess";
 @import "components/menu";
+@import "components/navbar";
+@import "components/spotify";
+@import "components/topic";
+@import "components/women";
 
 @import "layout/header";
 @import "layout/footer";

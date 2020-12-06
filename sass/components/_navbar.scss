@@ -1,0 +1,28 @@
+//navbar menu in desktop format
+.header-page {
+    &__menu {
+        .menu__list {
+            font-family: $font-mono;
+            font-size: 1.33rem;
+            width: 100%;
+            position: absolute;
+            top: 0.33rem; 
+            right: 0;
+            overflow: hidden;
+            list-style: none;
+            background:$color-white;            /*ponerlo en duda*/
+            height: 0px;
+
+            .item__link-position {
+                &, &:link, &:visited{
+                    text-decoration: none;
+                    padding: 0;
+                    margin: 0;
+                    margin-left: 48px;
+                    line-height: 28px;
+                    display: block;
+                }
+            }
+        }
+    }
+}

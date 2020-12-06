@@ -1,54 +1,21 @@
+//burger menu transformation
 .menu__checkbox {
-    display: block;
-    width: 2.33rem;
-    height: 2rem;
-    opacity: 0;
-    z-index: 2;
-    position: absolute;
-    top: 0.66rem;
-    right: 0.66rem;
-
-    &__logo {
-        float: left;
-        height: 2rem;
-        width: 2rem;
-    }
-
-    &__menu {
-        float: right;
-    }
+    display: none;
 }
 //show menu
 .menu__checkbox[type="checkbox"]:checked  ~ .menu-checked .menu-checked__list {
-    height: 224px;
+    height: 18.667rem;
 }
 //cross movement
-.menu__checkbox:checked + header .menu__burger {
-    transform: translate(5px, 5px) scaleX(1.0999) rotate(-45deg);
-    // transition: transform 500ms ease-in-out; 
+.menu__checkbox:checked + .menu .menu__burger {
+    transform: translate(0.42rem, -0.42rem) scaleX(1.0999) rotate(45deg) ;
 } 
 
-// .menu__checkbox:disabled + header .menu__burger::after {
-//     transform: rotate(45deg) scaleX(1) translate(-5px, -5px);
-//     transition: transform 250ms ease-in-out; 
-// } 
-
-.menu__checkbox:checked + header .menu__burger:nth-last-child(2) {
-    transform: translate(5px, -5px) scaleX(1.0999) rotate(45deg) ;
-    // transition: transform 500ms ease-in-out; 
-}
-
-// .menu__checkbox:disabled + header .menu__burger:nth-last-child(2)::after {
-//     transform: rotate(-45deg) scaleX(1) translate(-5px, 5px);
-//     transition: transform 250ms ease-in-out; 
-// }
-
-.menu__checkbox:checked + header .menu__burger:nth-last-child(3){
-    transform: translate(5px, 0px) scaleX(1.0999) ;
+.menu__checkbox:checked + .menu .menu__burger:nth-last-child(2) {
+    transform: translate(0.42rem, 0) scaleX(1.0999) ;
     opacity: 0;
 }
 
-// .menu__checkbox:disabled + header .menu__burger:nth-last-child(3)::after {
-//     transform: scaleX(1) translate(-5px, 0px);
-//     opacity: 1;
-// }
+.menu__checkbox:checked + .menu .menu__burger:nth-last-child(3) {
+    transform: translate(0.42rem, 0.42rem) scaleX(1.0999) rotate(-45deg);
+}

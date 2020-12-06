@@ -1,0 +1,22 @@
+//spotify list 
+.spotify {
+    .spotify__title {
+        display: block;
+    }
+    .spotify__list {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+
+        .list__item-podcast {
+            margin-bottom: 0.92rem;
+            width: 24.83rem;
+            height: 19.25rem;//modified from 225px to 231px due to the settings given by spotify
+        }
+    }
+    
+}

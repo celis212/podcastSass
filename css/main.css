@@ -95,46 +95,58 @@ body {
   padding-left: 1.33rem;
   margin-bottom: 1.17rem; }
 
-.our-topic .our-topic__title {
+.our-topic__title {
   padding: 0 1.33rem;
   font-size: 3rem;
   line-height: 3.5rem;
   font-weight: 400; }
-.our-topic .our-topic__icons {
+.our-topic__icons {
   margin-top: 2rem;
   font-size: 2rem;
   line-height: 2.67rem; }
-  .our-topic .our-topic__icons .icons--text {
+  .our-topic__icons .icons--text {
     font-weight: 500;
     width: 100%;
     text-align: center;
     margin-bottom: 4.33rem; }
-  .our-topic .our-topic__icons #text--work {
-    margin-bottom: 3rem; }
-  .our-topic .our-topic__icons #text--security {
-    margin-bottom: 4.33rem; }
 
-.news .news__title {
+.news__title {
   font-size: 3rem;
   line-height: 3.5rem;
   font-weight: 400;
   color: #ffffff;
   text-align: center;
   padding: 5.33rem 0 3rem 0; }
-.news .news__button .button--escucha, .news .news__button .button--escucha:active {
+.news__button .button--escucha, .news__button .button--escucha:active {
   font-family: "IBM Plex Mono", monospace;
   font-size: 1.33rem;
   line-height: 1.83rem;
   font-weight: 400;
   text-align: center; }
 
-.link-media .link-media__copyright {
+.link-media__copyright {
   font-family: "IBM Plex Mono", monospace;
   font-size: 1.17rem;
   line-height: 1.83rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 0.66rem; }
+
+.menu {
+  position: absolute;
+  float: right;
+  top: 1.333rem;
+  right: 1.58rem;
+  z-index: 66; }
+  .menu .menu__burger {
+    display: block;
+    width: 1.5rem;
+    height: 0.17rem;
+    margin-bottom: 0.25rem;
+    position: relative;
+    top: 0.5rem;
+    background: #000000;
+    transition: transform 250ms ease-in-out; }
 
 .firts-introduction .firts-introduction__button {
   padding-top: 3rem;
@@ -160,44 +172,45 @@ body {
     cursor: pointer; }
 
 .menu__checkbox {
-  display: block;
-  width: 2.33rem;
-  height: 2rem;
-  opacity: 0;
-  z-index: 2;
-  position: absolute;
-  top: 0.66rem;
-  right: 0.66rem; }
-  .menu__checkbox__logo {
-    float: left;
-    height: 2rem;
-    width: 2rem; }
-  .menu__checkbox__menu {
-    float: right; }
+  display: none; }
 
 .menu__checkbox[type="checkbox"]:checked ~ .menu-checked .menu-checked__list {
-  height: 224px; }
+  height: 18.667rem; }
 
-.menu__checkbox:checked + header .menu__burger {
-  transform: translate(5px, 5px) scaleX(1.0999) rotate(-45deg); }
+.menu__checkbox:checked + .menu .menu__burger {
+  transform: translate(0.42rem, -0.42rem) scaleX(1.0999) rotate(45deg); }
 
-.menu__checkbox:checked + header .menu__burger:nth-last-child(2) {
-  transform: translate(5px, -5px) scaleX(1.0999) rotate(45deg); }
-
-.menu__checkbox:checked + header .menu__burger:nth-last-child(3) {
-  transform: translate(5px, 0px) scaleX(1.0999);
+.menu__checkbox:checked + .menu .menu__burger:nth-last-child(2) {
+  transform: translate(0.42rem, 0) scaleX(1.0999);
   opacity: 0; }
 
-.header-page__menu .menu__burger {
-  display: block;
-  width: 1.5rem;
-  height: 0.16rem;
-  margin-bottom: 0.25rem;
-  position: relative;
-  top: 0.5rem;
-  background: #000000;
-  z-index: 1;
-  transition: transform 250ms ease-in-out; }
+.menu__checkbox:checked + .menu .menu__burger:nth-last-child(3) {
+  transform: translate(0.42rem, 0.42rem) scaleX(1.0999) rotate(-45deg); }
+
+.firts-introduction {
+  display: inline-block; }
+  .firts-introduction .firts-introduction__text .text--paragraph-two {
+    font-size: 1.33rem;
+    line-height: 2rem;
+    display: none; }
+
+.guess .guess__images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .guess .guess__images .images__women {
+    width: 26.67rem;
+    height: 20.25rem; }
+
+.menu-checked .menu-checked__list {
+  overflow: hidden;
+  list-style: none;
+  height: 0px;
+  transition: height 0.4s ease; }
+.menu-checked .item-checked--link, .menu-checked .item-checked--link:link, .menu-checked .item-checked--link:visited {
+  display: block; }
+
 .header-page__menu .menu__list {
   font-family: "IBM Plex Mono", monospace;
   font-size: 1.33rem;
@@ -218,13 +231,47 @@ body {
     line-height: 28px;
     display: block; }
 
-.menu-checked .menu-checked__list {
-  overflow: hidden;
-  list-style: none;
-  height: 0px;
-  transition: height 0.4s ease; }
-.menu-checked .item-checked--link, .menu-checked .item-checked--link:link, .menu-checked .item-checked--link:visited {
+.spotify .spotify__title {
   display: block; }
+.spotify .spotify__list {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  height: 100%; }
+  .spotify .spotify__list .list__item-podcast {
+    margin-bottom: 0.92rem;
+    width: 24.83rem;
+    height: 19.25rem; }
+
+.our-topic__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .our-topic__icons .icons__article {
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .our-topic__icons .icons__article .icons--image {
+      width: 8.67rem;
+      height: 8.67rem;
+      margin: 1.08rem 0; }
+    .our-topic__icons .icons__article #text--work {
+      margin-bottom: 3rem; }
+    .our-topic__icons .icons__article #text--security {
+      margin-bottom: 4.33rem; }
+
+.women-codding {
+  display: flex;
+  flex-direction: column; }
+  .women-codding .women-codding__image {
+    width: 30rem;
+    height: 43.25rem;
+    margin-top: -7.9583rem;
+    align-self: center; }
 
 .header-page::after {
   content: "";
@@ -253,6 +300,9 @@ body {
     width: 33.33rem;
     height: 2.58rem;
     margin-top: 0.66rem; }
+    .link-media__social .link--image {
+      height: 2.33rem;
+      width: 1.17rem; }
 
 .header-page {
   width: 100%;

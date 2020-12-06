@@ -3,14 +3,6 @@ body {
     font-family: $font-sans;
 }
 
-.header-page {
-    .header-page__menu {
-        .menu__list {
-
-        }
-    }
-}
-
 .menu-checked {
     .menu-checked__list {
         font-family: $font-mono;
@@ -43,19 +35,11 @@ body {
             font-weight: 400;
         }
 
-        .title--dot-blue {
-
-        }
-
         .text--paragraph-one {
             font-size: 1.16rem;
             line-height: 1.83rem;
             font-weight: 400;
         }   
-        
-        .text--paragraph-two {
-            
-        }
     }
 
     .firts-introduction__button {
@@ -110,14 +94,14 @@ body {
 }
 
 .our-topic {
-    .our-topic__title {
+    &__title {
         padding: 0 1.33rem;
         font-size: 3rem;
         line-height: 3.5rem;
         font-weight: 400;
     }
 
-    .our-topic__icons {
+    &__icons {
         margin-top: 2rem;
         font-size: 2rem;
         line-height: 2.67rem;
@@ -128,19 +112,11 @@ body {
             text-align: center;
             margin-bottom: 4.33rem;
         }
-
-        #text--work {
-            margin-bottom: 3rem;//different size in the margin bottom
-        }
-        
-        #text--security {
-            margin-bottom: 4.33rem;//different size in the margin bottom
-        }
     }
 }
 
 .news {
-    .news__title {
+    &__title {
         font-size: 3rem;
         line-height: 3.5rem;
         font-weight: 400;
@@ -149,7 +125,7 @@ body {
         padding: 5.33rem 0 3rem 0;
     }
 
-    .news__button {
+    &__button {
         .button--escucha {
         &, &:active {
             font-family: $font-mono;
@@ -163,7 +139,7 @@ body {
 }
 
 .link-media {
-    .link-media__copyright {
+    &__copyright {
         font-family: $font-mono;
         font-size: 1.17rem;
         line-height: 1.83rem;
