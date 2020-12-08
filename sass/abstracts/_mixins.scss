@@ -18,14 +18,8 @@
 //  1em = 16px
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-      @media (max-width: (780/16) * 1em) {
-        @content;
-      }
-    }
-  
     @if $breakpoint == tab {
-      @media (max-width: (1170/16) * 1em) {
+      @media (min-width: (780/16) * 1em) and (max-width: (1170/16) * 1em) {
         @content;
       }
     }
