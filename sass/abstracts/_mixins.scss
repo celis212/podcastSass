@@ -1,0 +1,32 @@
+@mixin clearfix($property) {
+    &::after {
+      content: "";
+      clear: both;
+      display: $property;
+    }
+
+    &::before {
+      content: "";
+      display: $property;
+    }
+  }
+//  MEDIA QUERIES
+//  0 - 780: Phone
+//  780 - 1170: Tablet 
+//  1170 - 1440: normal
+
+//  1em = 16px
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == tab {
+      @media (min-width: (780/16) * 1em) and (max-width: (1170/16) * 1em) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint == desktop {
+      @media (min-width: (1170/16) * 1em) {
+        @content;
+      }
+    }
+}

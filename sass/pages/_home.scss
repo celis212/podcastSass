@@ -1,0 +1,101 @@
+.header-page {
+    width: 100%;
+    position: relative;
+    height: 3.66rem;
+    top: 0;
+    padding: 0.83rem 1.59rem 0.83rem 1.33rem;
+
+    @include respond(tab) {
+        height: 4rem;
+        padding: 1rem 3.5714rem;
+    }
+
+    @include respond(desktop) {
+        height: 5rem;
+        padding: 1.63rem 6.25rem;
+    }
+}
+
+.menu-checked {
+    &__list {
+       background: $color-background;
+       width: 100%;
+    } 
+}
+
+.spotify {
+    width: 100%;
+    margin-top: 2rem;
+    background-image: linear-gradient(225deg, 
+    $color-gradient-one 0%, 
+    $color-gradient-two 100%);
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+    padding-bottom: 11.041667rem;//11 px is subtracted from the list__itemn-podcast
+
+    @include respond(tab) {
+        clip-path: polygon(0 9%, 100% 0, 100% 91%, 0 100%);
+        margin-top: 1.08rem;
+        padding-bottom: 7.86rem;/*64 px is subtracted from the list__itemn-podcast*/
+    }
+    
+    @include respond(desktop) {
+        clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
+        margin-top: 0.3125rem;
+        padding-bottom: 10.04rem;/*64 px is subtracted from the list__itemn-podcast*/
+    }
+}
+
+.guess {
+    margin-top: 4.5rem;
+
+    @include respond(tab) {
+        margin-top: 4.571rem;
+    }
+    
+    @include respond(desktop) {
+        margin-top: 4rem;
+    }
+}
+
+.our-topic {
+    margin-top: 4rem;
+
+    @include respond(tab) {
+        margin-top: 4rem;
+    }
+
+    @include respond(desktop) {
+        margin-top: 4rem;
+    }
+}
+
+.news {
+    width: 100%;
+    background-image: linear-gradient(225deg,
+    $color-gradient-one 0%, 
+    $color-gradient-two 100%);
+    clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+    padding-bottom: 5.58334rem;
+
+    @include respond(tab) {
+        clip-path: polygon(0 21%, 100% 0, 100% 100%, 0 100%);
+        padding-bottom: 7.786rem;
+    }
+
+    @include respond(desktop) {
+        clip-path: polygon(0 26%, 100% 0, 100% 100%, 0 100%);
+        padding-bottom: 9.44rem;
+    }
+}
+
+.link-media {
+    height: 10.08rem;
+
+    @include respond(tab) {
+        height: 5.94rem;
+    }
+
+    @include respond(desktop) {
+        height: 5.94rem;
+    }
+}

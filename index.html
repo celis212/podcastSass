@@ -4,75 +4,78 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500&family=IBM+Plex+Sans:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <title>PodCast</title>
+    <title>PodCast pale blue dot</title>
 </head>
 <body>
     <div class="container">
         <div class="contain">
-            <input type="checkbox" class="menu__checkbox"/>
+            <input type="checkbox" class="menu__checkbox" id="navi-toggle"/>
+            <label for="navi-toggle" class="three-line">
+                <span class="three-line__burger"></span>
+                <span class="three-line__burger"></span>
+                <span class="three-line__burger"></span>
+            </label>
             <header class="header-page">
                 <img src="./images/logo.svg" alt="logo" class="header-page__logo"/>
                 <nav class="header-page__menu">
-                    <span class="menu__burger"></span>
-                    <span class="menu__burger"></span>
-                    <span class="menu__burger"></span>
                     <ul class="menu__list">
-                        <li class="list--item"><a href="#" class="item__link-position">EPISODIOS</a></li>
-                        <li class="list--item"><a href="#" class="item__link-position">NOSOTROS</a></li>
-                        <li class="list--item"><a href="#" class="item__link-position">ENTREVISTAS</a></li>
-                        <li class="list--item"><a href="#" class="item__link-position">TÓPICOS</a></li>
+                        <li class="list--item"><a href="#spotify" class="item__link-position">EPISODIOS</a></li>
+                        <li class="list--item"><a href="#nosotros" class="item__link-position">NOSOTROS</a></li>
+                        <li class="list--item"><a href="#entrevistas" class="item__link-position">ENTREVISTAS</a></li>
+                        <li class="list--item"><a href="#topicos" class="item__link-position">TÓPICOS</a></li>
                     </ul>
                 </nav>
             </header>
             <section class="menu-checked">
                 <ul class="menu-checked__list">
-                    <li><a href="#" class="item-checked--link">EPISODIOS</a></li>
-                    <li><a href="#" class="item-checked--link">NOSOTROS</a></li>
-                    <li><a href="#" class="item-checked--link">ENTREVISTAS</a></li>
-                    <li><a href="# " class="item-checked--link">TÓPICOS</a></li>
+                    <li><a href="#spotify" class="item-checked--link">EPISODIOS</a></li>
+                    <li><a href="#nosotros" class="item-checked--link">NOSOTROS</a></li>
+                    <li><a href="#entrevistas" class="item-checked--link">ENTREVISTAS</a></li>
+                    <li><a href="#topicos" class="item-checked--link">TÓPICOS</a></li>
                 </ul>
             </section>
             <section class="firts-introduction">
                 <article class="firts-introduction__text">
-                    <h1 class="text--title">Hello <del>world</del> pale blue dot<span class="tittle--dot-blue">.</span></h1>
-                    <p class="text--paragraph-one">Un podcasts que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
-                    <p class="text--paragraph-two">El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
+                    <h2 class="text--title">Hello <del>world</del> pale blue dot<span class="tittle--dot-blue">.</span></h2>
+                    <h6 class="text--paragraph-one">Un podcasts que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</h6>
+                    <h6 class="text--paragraph-two">El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</h6>
                 </article>
                 <div class="firts-introduction__button">
-                    <button href="#" class="button--conoce">CONOCÉ MÁS</button>
+                    <button type="button" name="conocé más" class="button--conoce">CONOCÉ MÁS</button>
                 </div>
             </section>
-            <section class="spotify">
-                <h1 class="spotify__title">Episodios</h1>
+            <section class="spotify" id="spotify">
+                <h2 class="spotify__title">Episodios</h2>
                 <ul class="spotify__list">
-                    <li><iframe class="list__item-podcast" src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-                    <li><iframe class="list__item-podcast" src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-                    <li><iframe class="list__item-podcast" src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-                    <li><iframe class="list__item-podcast" src="https://open.spotify.com/embed-podcast/episode/5mddqHiI96V0ZMdMidn3WW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+                    <li><iframe class="list__item-podcast" src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" allow="encrypted-media"></iframe></li>
+                    <li><iframe class="list__item-podcast" src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" allow="encrypted-media"></iframe></li>
+                    <li><iframe class="list__item-podcast" src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" allow="encrypted-media"></iframe></li>
+                    <li><iframe class="list__item-podcast" src="https://open.spotify.com/embed-podcast/episode/5mddqHiI96V0ZMdMidn3WW" allow="encrypted-media"></iframe></li>
                 </ul>
             </section>
             <section class="women-codding">
-                <img class="women-codding__image" src="images\phone.png" alt="article the secret history of the women in codding on a phone screen" />
+                <img class="women-codding__image" id="nosotros" src="images/phone.png" alt="article the secret history of the women in codding on a phone screen" />
                 <article>
-                    <h1 class="text__title">De dónde venimos</h1>
-                    <p class="test__paragraph">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br> <br>Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
+                    <h2 class="text__title">De dónde venimos</h2>
+                    <h6 class="text__paragraph">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br> <br>Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</h6>
                 </article>
             </section>
-            <section class="guess">
-                <h1 class="guess__title">Invitadas/os estelares</h1>
+            <section class="guess" id="entrevistas">
+                <h2 class="guess__title">Invitadas/os estelares</h2>
                 <div class="guess__images">
                     <img class="images__women" src="images/grace-hopper.png" alt="Grace Hopper" />
                     <img class="images__women" src="images/Katie-Bouman.png" alt="Katie Bouman">
                     <img class="images__women" src="images/Margaret_Hamilton.png" alt="Margaret Hamilton" />
-                    <img class="images__women" src="images/An E.R.A.Univac 1103 computer in the 1950s.png" alt="An E.R.A. Univac 1103 computer in the 1950 " />
-                    <img class="images__women" src="images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png" alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer" />
+                    <img class="images__women" src="images/an_e.r.a.univac_1103_computer_in_the_1950s.png" alt="An E.R.A. Univac 1103 computer in the 1950 " />
+                    <img class="images__women" src="images/computer_operators_with_an_Eniac—the_world’s_first_programmable_general-purpose_computer.png" alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer" />
                     <img class="images__women" src="images/susan-kare.png" alt="susan-kare" />
                 </div>
             </section>
-            <section class="our-topic">
-                <h1 class="our-topic__title">Algunos de nuestros temas</h1>
+            <section class="our-topic" id="topicos"> 
+                <h2 class="our-topic__title">Algunos de nuestros temas</h2>
                 <div class="our-topic__icons">
                     <article class="icons__article">
                         <img class="icons--image" src="images/icon1.svg" alt="icono representativo de Trabajo remoto" />
@@ -93,19 +96,19 @@
                 </div>
             </section>
             <section class="news">
-                <h1 class="news__title">¿Querés las últimas novedades?</h1>
+                <h2 class="news__title">¿Querés las últimas novedades?</h2>
                 <div class="news__button">
-                    <button class="button--conoce" href="#">ESCUCHÁ LOS EPISODIOS</button>
+                    <button type="button" name="escuchá los episodios" class="button--escucha">ESCUCHÁ LOS EPISODIOS</button>
                 </div>
             </section>
             <footer class="link-media">
                 <p class="link-media__copyright">© 2019— Hello blue pale dot</p>
                 <div class="link-media__social">
-                    <a href="#" class="social__link"><img class="link--image" src="./images/spotify-brands.svg" alt="logo de spotify" /></a>
-                    <a href="#" class="social__link"><img class="link--image" src="./images/instagram-brands.svg" alt="logo de instagram" /></a>
-                    <a href="#" class="social__link"><img class="link--image" src="./images/twitter-brands.svg" alt="logo de twitter" /></a>
-                    <a href="#" class="social__link"><img class="link--image" src="./images/facebook-brands.svg" alt="logo de facebook" /></a>
-                    <a href="#" class="social__link"><img class="link--image" src="./images/telegram-brands.svg" alt="logo de telegram" /></a>
+                    <a href="#bottom"><i class="fab fa-spotify"></i></a>
+                    <a href="#bottom"><i class="fab fa-instagram"></i></a>
+                    <a href="#bottom"><i class="fab fa-twitter"></i></a>
+                    <a href="#bottom"><i class="fab fa-facebook"></i></a>
+                    <a href="#bottom"><i class="fab fa-telegram"></i></a>
                 </div>  
             </footer>
         </div>

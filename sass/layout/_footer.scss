@@ -1,0 +1,63 @@
+.link-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    @include respond(tab) {
+        justify-content: space-between;
+    }
+
+    @include respond(desktop) {
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        width: 33.33rem;
+
+        @include respond(tab) {
+            width: auto;
+        }
+    
+        @include respond(desktop) {
+            width: auto;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-evenly;
+        width: 33.33rem;
+        height: 2.58rem;
+        margin-top: 0.66rem;
+
+        @include respond(tab) {
+            width: auto;
+            margin-top: 0;
+            margin-right: 3.58rem;
+        }
+    
+        @include respond(desktop) {
+            width: auto;
+            margin-top: 0;
+            margin-right: 6.25rem;
+        }
+
+        .fab {
+            text-decoration: none;
+            color: $color-text;
+            font-size: 1.33rem;
+            line-height: 2.33rem;
+
+            @include respond(tab) {
+                width: 1.29rem;
+                margin-left: 2.58rem;
+            }
+        
+            @include respond(desktop) {
+                width: 1.13rem;
+                margin-left: 1.75rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+//women codding
+.women-codding {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tab) {
+        flex-direction: row;
+        margin-left: $margin-left-tab;
+    }
+    
+    @include respond(desktop) {
+        flex-direction: row;
+        margin-left: 12.5rem;
+        margin-right: 6.5rem;
+    }
+
+    &__image {
+        width: 30rem;
+        height: 43.25rem;
+        margin-top: -7.9583rem;
+        align-self: center;
+
+        @include respond(tab) {
+            width: 29.14rem;
+            height: 42.14rem;
+            margin-top: -9.429rem;
+        }
+        
+        @include respond(desktop) {
+            width: 28.6rem;
+            height: 41.25rem;
+            margin-top: -10.54rem;
+        }
+    }
+}

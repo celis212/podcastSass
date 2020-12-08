@@ -1,0 +1,58 @@
+//navbar menu in desktop format
+.header-page {
+    &__menu {
+        .menu__list {
+            width: 100%;
+            position: absolute;
+            top: 0.33rem; 
+            right: 0;
+            overflow: hidden;
+            list-style: none;
+            //background:$color-white;            /*ponerlo en duda*/
+            height: 0;
+
+            @include respond(desktop) {
+                position: relative;
+                height: 2.25rem;
+            }
+
+            .list--item {
+                @include respond(desktop) {
+                    display: inline-block;
+                }
+
+                .item__link-position {
+                    &, &:link, &:visited {
+                        @include respond(desktop) {
+                            font-family: $font-mono;
+                            font-size: 1rem;
+                            line-height: 1.75rem;
+                            color: $color-text;
+                            text-decoration: none;
+                            padding: 0;
+                            margin: 0;
+                            margin-left: 3rem;
+                            display: block;
+                        }
+                    }
+
+                    &:hover {
+                        @include respond(desktop) {
+                            color: $color-text-link;
+                            font-family: $font-mono;
+                            text-decoration: line-through;
+                        }
+                    }    
+
+                    &:active {
+                        @include respond(desktop) {
+                        text-decoration: line-through;
+                        color: $color-text;
+                        opacity: 0.56;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}

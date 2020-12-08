@@ -1,0 +1,23 @@
+.header-page { 
+    @include clearfix(table);
+
+    &__logo {
+        float: left; 
+        height: 2rem; 
+        width: 2rem; 
+
+        @include respond(tab) {
+            height: 2rem;
+            width: 2rem;
+        }
+    
+        @include respond(desktop) {
+            height: 2.25rem;
+            width: 2.25rem;
+        }
+    }
+
+    &__menu {
+        float: right;
+    }
+}

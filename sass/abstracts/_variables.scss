@@ -1,0 +1,30 @@
+//COLORS
+$color-text: #060A24;
+
+$color-text-link: #00F3BB;
+
+$color-bottom-one: #00F3BB;
+$color-bottom-two: #0000FE;
+$color-bottom-three: #00F0B8;
+
+$color-background: #0000EC;
+
+$color-gradient-one: #0000FF;
+$color-gradient-two: #0000A3;
+
+$color-black: #000000;
+$color-white: #ffffff;
+
+//FONT-FAMILY
+$font-sans: 'IBM Plex Sans', sans-serif;
+$font-mono: 'IBM Plex Mono', monospace;
+$font-medium: 'IBM Plex Mono', medium;
+
+//Relative to 1% of the width of the viewport*
+    //320px
+        $margin-left: (16/320)*100vw;
+    //780px
+        $margin-left-tab: (50/780)*100vw;
+        $margin-topic: (156/780)*100vw;
+    //1440px
+        $width-podcast: (584/1440)*100vw;

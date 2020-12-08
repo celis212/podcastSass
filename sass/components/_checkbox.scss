@@ -1,0 +1,21 @@
+//burger menu transformation
+.menu__checkbox {
+    display: none;
+}
+//show menu
+.menu__checkbox[type="checkbox"]:checked  ~ .menu-checked .menu-checked__list {
+    height: 18.667rem;
+}
+//cross movement
+.menu__checkbox:checked + .three-line .three-line__burger {
+    transform: translate(0.42rem, -0.42rem) scaleX(1.0999) rotate(45deg) ;
+} 
+
+.menu__checkbox:checked + .three-line .three-line__burger:nth-last-child(2) {
+    transform: translate(0.42rem, 0) scaleX(1.0999) ;
+    opacity: 0;
+}
+
+.menu__checkbox:checked + .three-line .three-line__burger:nth-last-child(3) {
+    transform: translate(0.42rem, 0.42rem) scaleX(1.0999) rotate(-45deg);
+}

@@ -1,0 +1,340 @@
+body {
+    color: $color-text;
+    font-family: $font-sans;
+}
+
+.firts-introduction {
+    &__text {
+        padding-top: 2.42rem;
+        font-family: $font-mono;
+
+        @include respond(tab) {
+            padding-top: 5.29rem;
+        }
+
+        @include respond(desktop) {
+            padding-top: 7.5rem;
+        }
+
+        .text--title {
+            font-size: 3rem;
+            line-height: 3.5rem;
+            margin-bottom: 1.33rem;
+            font-weight: 400;
+
+            @include respond(tab) {
+                margin: 0;
+                font-size: 4.1rem;
+                line-height: 5.2rem;
+            }
+    
+            @include respond(desktop) {
+                margin: 0;
+                font-size: 4rem;
+                line-height: 5.25rem;
+            }
+            
+            .tittle--dot-blue {
+                @include respond(tab) {
+                    color: $color-background;
+                }
+                
+                @include respond(desktop) {
+                    color: $color-background;
+                }
+            }    
+        }
+
+        .text--paragraph-one {
+            font-size: 1.16rem;
+            line-height: 1.83rem;
+            font-weight: 400;
+
+            @include respond(tab) {
+                display: none;
+            }
+            
+            @include respond(desktop) {
+                display: none;
+            }
+        }   
+    }
+
+    .firts-introduction__button {
+        .button--conoce {
+            &, &:active {
+                font-family: $font-mono;
+                font-size: 1.33rem;
+                line-height: 1.83rem;
+                font-weight: 400;
+                text-align: center; 
+
+                @include respond(desktop) {
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.menu-checked {
+    &__list {
+        font-family: $font-mono;
+        font-size: 1.33rem;
+        line-height: 2.33rem;
+
+        .item-checked--link {
+            &, &:link, &:visited {       
+                text-decoration: none;
+                color: $color-white;
+                font-weight: 300;
+                margin: 1.33rem 0 2rem $margin-left;
+
+                @include respond(tab) {
+                    margin-left: $margin-left-tab;
+                }
+            }   
+        }
+    }
+}
+
+.spotify {
+    &__title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        font-weight: 400;
+        color: $color-white;
+        padding-top: 5.33rem;
+        padding-left: $margin-left;
+
+        @include respond(tab) {
+            font-size: 3rem;
+            line-height: 3.857rem;
+            padding-top: 8.93rem;
+            padding-left: $margin-left-tab;
+        }
+    
+        @include respond(desktop) {
+            font-size: 3rem;
+            line-height: 3.88rem;
+            padding-top: 11.63rem;
+            padding-left: 12.5rem;
+        }
+    }
+}
+
+.women-codding {
+    .text__title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        font-weight: 400;
+        margin: 2.25rem $margin-left 0 $margin-left;
+
+        @include respond(tab) {
+            width: 21.43rem;
+            font-size: 3rem;
+            line-height: 3.714rem;
+            margin: 1.571rem 0 0 1.429rem;
+        }
+    
+        @include respond(desktop) {
+            max-width: 29rem;
+            font-size: 3rem;
+            line-height: 3.88rem;
+            margin: 1.28rem 0 0 3.9rem;
+        }
+    }
+
+    .text__paragraph {
+        font-family: $font-mono;
+        font-size: 1.17rem;
+        font-weight: 400;
+        line-height: 1.83rem;
+        margin: 0.67rem $margin-left 0 $margin-left;
+
+        @include respond(tab) {
+            width: 32.223vw;
+            margin: 0.8571rem 0 0 1.429rem;
+        }
+    
+        @include respond(desktop) {
+            max-width: 29rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            margin: 1.5rem 0 0 3.9rem;
+        }
+    }
+}
+
+.guess {
+    &__title {
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 3.5rem;
+        padding-left: $margin-left;
+        margin-bottom: 1.17rem;
+
+        @include respond(tab) {
+            font-size: 3rem;
+            line-height: 3.714rem;
+            padding-left: $margin-left-tab;
+            margin-bottom: 1.786rem;
+        }
+    
+        @include respond(desktop) {
+            font-size: 3rem;
+            line-height: 3.88rem;
+            padding-left: 12.5rem;
+            margin-bottom: 2.25rem;
+        }
+    }
+}
+
+.our-topic {
+    &__title {
+        padding: 0 $margin-left;
+        font-size: 3rem;
+        line-height: 3.5rem;
+        font-weight: 400;
+
+        @include respond(tab) {
+            padding: 0 $margin-left-tab;
+            font-size: 3rem;
+            line-height: 3.714rem;
+        }
+    
+        @include respond(desktop) {
+            padding: 0 12.5rem;
+            font-size: 3rem;
+            line-height: 3.88rem;
+        }
+    }
+
+    &__icons {
+        margin-top: 2rem;
+        font-size: 2rem;
+        line-height: 2.67rem;
+
+        @include respond(tab) {
+            margin-top: 2.857rem;
+            padding: 0 $margin-topic;//center the icons
+        }
+    
+        @include respond(desktop) {
+            margin-top: 3.5rem;
+            margin-left: 12.5rem; 
+        }
+        .icons__article {
+            .icons--text {
+                font-weight: 500;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 4.33rem;
+
+                @include respond(tab) {
+                    margin-top: 1.143rem;
+                    margin-bottom: 2.429rem;
+                }
+            
+                @include respond(desktop) {
+                    margin-top: 1rem;
+                    margin-bottom: 2.13rem;
+                }
+            }
+
+            #text--work {
+                margin-bottom: 3rem;//different size in the margin bottom
+                
+                @include respond(tab) {
+                    margin-bottom: 2.429rem;
+                }
+            
+                @include respond(desktop) {
+                    margin-bottom: 2.13rem;
+                }
+            }
+            
+            #text--security {
+                margin-bottom: 4.33rem;//different size in the margin bottom
+                
+                @include respond(tab) {
+                    margin-bottom: 2.429rem;
+                }
+            
+                @include respond(desktop) {
+                    margin-bottom: 2.13rem;
+                }
+            }
+        }    
+    }
+}
+
+.news {
+    &__title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        font-weight: 400;
+        color: $color-white;
+        text-align: center;
+        padding: 5.33rem 0 3rem 0;
+
+        @include respond(tab) {
+            font-size: 3rem;
+            line-height: 3.714rem;
+            padding: 9.929rem 0 2.571rem 0;
+        }
+    
+        @include respond(desktop) {
+            font-size: 3rem;
+            line-height: 3.88rem;
+            padding: 13.31rem 0 2.25rem 0;
+        }
+    }
+
+    &__button {
+        .button--escucha {
+        &, &:active {
+            font-family: $font-mono;
+            font-size: 1.33rem;
+            line-height: 1.83rem;
+            font-weight: 400;
+            text-align: center; 
+
+            @include respond(desktop) {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.link-media {
+    &__copyright {
+        font-family: $font-mono;
+        font-size: 1.17rem;
+        line-height: 1.83rem;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 0.66rem;
+
+        @include respond(tab) {
+            font-size: 1.1rem;
+            line-height: 1.79rem;
+            /* width: auto; */
+            margin-bottom: 0;
+            margin-left: 3.58rem;
+        }
+    
+        @include respond(desktop) {
+            font-size: 1rem;
+            line-height: 1.75rem;
+            font-weight: 400;
+            /* width: auto; */
+            margin-bottom: 0;
+            margin-left: 6.25rem;
+        }
+    }
+}

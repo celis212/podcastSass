@@ -1,0 +1,19 @@
+// menu of lower collapse 
+.menu-checked {
+    @include respond(desktop) {
+        display: none;
+    }
+
+    &__list {
+        overflow: hidden;
+        list-style: none;
+        height: 0;
+        transition: height 0.4s ease;
+    }
+
+    .item-checked--link {
+        &, &:link, &:visited{
+        display: block;
+        }
+    }
+}
