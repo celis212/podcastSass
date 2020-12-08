@@ -6,7 +6,7 @@
 
     @include respond(tab) {
         flex-direction: row;
-        margin-left: 3.571rem;
+        margin-left: $margin-left-tab;
     }
     
     @include respond(desktop) {

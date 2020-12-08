@@ -59,6 +59,14 @@
 
 .our-topic {
     margin-top: 4rem;
+
+    @include respond(tab) {
+        margin-top: 4rem;
+    }
+
+    @include respond(desktop) {
+        margin-top: 4rem;
+    }
 }
 
 .news {
@@ -68,8 +76,26 @@
     $color-gradient-two 100%);
     clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
     padding-bottom: 5.58334rem;
+
+    @include respond(tab) {
+        clip-path: polygon(0 21%, 100% 0, 100% 100%, 0 100%);
+        padding-bottom: 7.786rem;
+    }
+
+    @include respond(desktop) {
+        clip-path: polygon(0 26%, 100% 0, 100% 100%, 0 100%);
+        padding-bottom: 9.44rem;
+    }
 }
 
 .link-media {
     height: 10.08rem;
+
+    @include respond(tab) {
+        height: 5.94rem;
+    }
+
+    @include respond(desktop) {
+        height: 5.94rem;
+    }
 }

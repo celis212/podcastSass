@@ -1,9 +1,20 @@
 //our topics
 .our-topic {
-    &__icons {
+    &__icons { 
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include respond(tab) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        @include respond(desktop) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
 
         .icons__article {
             width: 24rem;
@@ -11,18 +22,18 @@
             flex-direction: column;
             align-items: center;
 
+            @include respond(tab) {
+                width: 18.14rem;
+            }
+        
+            @include respond(desktop) {
+                width: 16.25rem;
+            }
+
             .icons--image {
                 width: 8.67rem;
                 height: 8.67rem;
                 margin: 1.08rem 0;
-            }
-
-            #text--work {
-                margin-bottom: 3rem;//different size in the margin bottom
-            }
-            
-            #text--security {
-                margin-bottom: 4.33rem;//different size in the margin bottom
             }
         }
     }

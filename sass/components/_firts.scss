@@ -1,10 +1,10 @@
 //first title and text
 .firts-introduction {
     display: inline-block;
-    padding: 0 1.33rem;
+    padding: 0 $margin-left;
 
     @include respond(tab) {
-        padding: 0 3.5714rem;
+        padding: 0 $margin-left-tab;
         width: 100%;
     }
 

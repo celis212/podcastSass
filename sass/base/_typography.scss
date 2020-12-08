@@ -89,10 +89,10 @@ body {
                 text-decoration: none;
                 color: $color-white;
                 font-weight: 300;
-                margin: 1.33rem 0 2rem 1.33rem;
+                margin: 1.33rem 0 2rem $margin-left;
 
                 @include respond(tab) {
-                    margin-left: 3.5714rem;
+                    margin-left: $margin-left-tab;
                 }
             }   
         }
@@ -106,13 +106,13 @@ body {
         font-weight: 400;
         color: $color-white;
         padding-top: 5.33rem;
-        padding-left: 1.33rem;
+        padding-left: $margin-left;
 
         @include respond(tab) {
             font-size: 3rem;
             line-height: 3.857rem;
             padding-top: 8.93rem;
-            padding-left: 3.5714rem;
+            padding-left: $margin-left-tab;
         }
     
         @include respond(desktop) {
@@ -129,7 +129,7 @@ body {
         font-size: 3rem;
         line-height: 3.5rem;
         font-weight: 400;
-        margin: 2.25rem 1.33rem 0 1.33rem;
+        margin: 2.25rem $margin-left 0 $margin-left;
 
         @include respond(tab) {
             width: 21.43rem;
@@ -151,11 +151,11 @@ body {
         font-size: 1.17rem;
         font-weight: 400;
         line-height: 1.83rem;
-        margin: 0.67rem 1.33rem 0 1.33rem;
+        margin: 0.67rem $margin-left 0 $margin-left;
 
         @include respond(tab) {
             width: 32.223vw;
-            margin: 12px 0 0 20px;
+            margin: 0.8571rem 0 0 1.429rem;
         }
     
         @include respond(desktop) {
@@ -173,13 +173,13 @@ body {
         font-size: 3rem;
         font-weight: 400;
         line-height: 3.5rem;
-        padding-left: 1.33rem;
+        padding-left: $margin-left;
         margin-bottom: 1.17rem;
 
         @include respond(tab) {
             font-size: 3rem;
             line-height: 3.714rem;
-            padding-left: 3.571rem;
+            padding-left: $margin-left-tab;
             margin-bottom: 1.786rem;
         }
     
@@ -194,10 +194,22 @@ body {
 
 .our-topic {
     &__title {
-        padding: 0 1.33rem;
+        padding: 0 $margin-left;
         font-size: 3rem;
         line-height: 3.5rem;
         font-weight: 400;
+
+        @include respond(tab) {
+            padding: 0 $margin-left-tab;
+            font-size: 3rem;
+            line-height: 3.714rem;
+        }
+    
+        @include respond(desktop) {
+            padding: 0 12.5rem;
+            font-size: 3rem;
+            line-height: 3.88rem;
+        }
     }
 
     &__icons {
@@ -205,12 +217,57 @@ body {
         font-size: 2rem;
         line-height: 2.67rem;
 
-        .icons--text {
-            font-weight: 500;
-            width: 100%;
-            text-align: center;
-            margin-bottom: 4.33rem;
+        @include respond(tab) {
+            margin-top: 2.857rem;
+            padding: 0 $margin-topic;//center the icons
         }
+    
+        @include respond(desktop) {
+            margin-top: 3.5rem;
+            margin-left: 12.5rem; 
+        }
+        .icons__article {
+            .icons--text {
+                font-weight: 500;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 4.33rem;
+
+                @include respond(tab) {
+                    margin-top: 1.143rem;
+                    margin-bottom: 2.429rem;
+                }
+            
+                @include respond(desktop) {
+                    margin-top: 1rem;
+                    margin-bottom: 2.13rem;
+                }
+            }
+
+            #text--work {
+                margin-bottom: 3rem;//different size in the margin bottom
+                
+                @include respond(tab) {
+                    margin-bottom: 2.429rem;
+                }
+            
+                @include respond(desktop) {
+                    margin-bottom: 2.13rem;
+                }
+            }
+            
+            #text--security {
+                margin-bottom: 4.33rem;//different size in the margin bottom
+                
+                @include respond(tab) {
+                    margin-bottom: 2.429rem;
+                }
+            
+                @include respond(desktop) {
+                    margin-bottom: 2.13rem;
+                }
+            }
+        }    
     }
 }
 
@@ -222,6 +279,18 @@ body {
         color: $color-white;
         text-align: center;
         padding: 5.33rem 0 3rem 0;
+
+        @include respond(tab) {
+            font-size: 3rem;
+            line-height: 3.714rem;
+            padding: 9.929rem 0 2.571rem 0;
+        }
+    
+        @include respond(desktop) {
+            font-size: 3rem;
+            line-height: 3.88rem;
+            padding: 13.31rem 0 2.25rem 0;
+        }
     }
 
     &__button {
@@ -250,5 +319,22 @@ body {
         font-weight: 400;
         text-align: center;
         margin-bottom: 0.66rem;
+
+        @include respond(tab) {
+            font-size: 1.1rem;
+            line-height: 1.79rem;
+            /* width: auto; */
+            margin-bottom: 0;
+            margin-left: 3.58rem;
+        }
+    
+        @include respond(desktop) {
+            font-size: 1rem;
+            line-height: 1.75rem;
+            font-weight: 400;
+            /* width: auto; */
+            margin-bottom: 0;
+            margin-left: 6.25rem;
+        }
     }
 }

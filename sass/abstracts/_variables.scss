@@ -18,4 +18,13 @@ $color-white: #ffffff;
 //FONT-FAMILY
 $font-sans: 'IBM Plex Sans', sans-serif;
 $font-mono: 'IBM Plex Mono', monospace;
-$font-medium: 'IBM Plex Mono', medium;;
+$font-medium: 'IBM Plex Mono', medium;
+
+//Relative to 1% of the width of the viewport*
+    //320px
+        $margin-left: (16/320)*100vw;
+    //780px
+        $margin-left-tab: (50/780)*100vw;
+        $margin-topic: (156/780)*100vw;
+    //1440px
+        $width-podcast: (584/1440)*100vw;

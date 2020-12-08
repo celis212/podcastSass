@@ -40,9 +40,9 @@
             }
         
             @include respond(desktop) {
-                // width: 40.55vw;
                 height: 14.5rem;
-                width: 36.5rem;
+                width: $width-podcast;
+                max-width: 36.5rem;
                 display: block;
                 margin-bottom: 4.5rem;
                 // padding-left: 1.875rem;
